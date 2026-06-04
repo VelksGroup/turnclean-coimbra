@@ -175,7 +175,8 @@ const translations: Record<LanguageCode, Translation> = {
       subtitle: "Limpieza, preparación y apoyo operativo para alojamientos turísticos en Torrevieja.",
       cta: "Proteger mi apartamento por WhatsApp",
       micro: "Respuesta directa. Sin formularios. Sin pérdida de tiempo.",
-      badge_lux: "13 años en Luxemburgo"
+      badge_lux: "13 años en Luxemburgo",
+      wa: "Hola, quiero proteger mi apartamento turístico en Torrevieja."
     },
     s2: {
       title1: "Una mala limpieza",
@@ -251,7 +252,8 @@ const translations: Record<LanguageCode, Translation> = {
       a4: "Urgencias el mismo día",
       a5: "Apoyo puntual o colaboración fija",
       close_title: "Si necesitas que el apartamento quede listo de verdad, aquí se resuelve.",
-      disclaimer: "El próximo huésped no espera. Tu operación tampoco debería fallar."
+      disclaimer: "El próximo huésped no espera. Tu operación tampoco debería fallar.",
+      wa: "Hola, quiero contratar un plan de limpieza para mi apartamento en Torrevieja."
     },
     s5: {
       title_new: "13 años de estándar Luxemburgo.",
@@ -275,7 +277,8 @@ const translations: Record<LanguageCode, Translation> = {
       desc_new: "Si no quieres problemas, resuélvelo ahora.",
       btn_new: "Quiero resolverlo ya",
       note_new: "Respuesta rápida por WhatsApp.",
-      micro_new: "Cuando el huésped entra, ya no hay margen."
+      micro_new: "Cuando el huésped entra, ya no hay margen.",
+      wa: "Hola, me interesa asegurar la limpieza de mi apartamento en Torrevieja."
     },
     selector: {
       label: "Selecciona tu idioma",
@@ -334,7 +337,8 @@ const translations: Record<LanguageCode, Translation> = {
       subtitle: "Limpeza, preparação e apoio operacional para alojamentos turísticos em Torrevieja.",
       cta: "Proteger o meu apartamento pelo WhatsApp",
       micro: "Resposta direta. Sem formulários. Sem perda de tempo.",
-      badge_lux: "13 anos no Luxemburgo"
+      badge_lux: "13 anos no Luxemburgo",
+      wa: "Olá, quero proteger o meu apartamento turístico em Torrevieja."
     },
     s2: {
       title1: "Uma má limpeza",
@@ -410,7 +414,8 @@ const translations: Record<LanguageCode, Translation> = {
       a4: "Urgências n0 próprio dia",
       a5: "Apoio pontual ou colaboração fixa",
       close_title: "Se precisas que o apartamento fique verdadeiramente pronto, resolve aqui.",
-      disclaimer: "Promoção de lançamento sujeita a tamanho do imóvel e nível de serviço."
+      disclaimer: "Promoção de lançamento sujeita a tamanho do imóvel e nível de serviço.",
+      wa: "Olá, quero contratar um plano de limpeza para o meu apartamento em Torrevieja."
     },
     s5: {
       title_new: "13 anos de padrão Luxemburgo.",
@@ -434,7 +439,8 @@ const translations: Record<LanguageCode, Translation> = {
       desc_new: "Se não queres problemas, resolve agora.",
       btn_new: "Quero resolver já",
       note_new: "Resposta rápida pelo WhatsApp.",
-      micro_new: "Quando o hóspede entra, já não há margem."
+      micro_new: "Quando o hóspede entra, já não há margem.",
+      wa: "Olá, estou interessado em garantir a limpeza do meu apartamento em Torrevieja."
     },
     selector: {
       label: "Selecione o seu idioma",
@@ -493,7 +499,8 @@ const translations: Record<LanguageCode, Translation> = {
       subtitle: "Cleaning, preparation and operational support for tourist rentals in Torrevieja.",
       cta: "Protect my apartment on WhatsApp",
       micro: "Direct reply. No forms. No wasted time.",
-      badge_lux: "13 years in Luxembourg"
+      badge_lux: "13 years in Luxembourg",
+      wa: "Hello, I want to protect my tourist apartment in Torrevieja."
     },
     s2: {
       title1: "A bad cleaning",
@@ -569,7 +576,8 @@ const translations: Record<LanguageCode, Translation> = {
       a4: "Same-day emergencies",
       a5: "Punctual support or fixed collaboration",
       close_title: "If you need the apartment to be truly ready, it is resolved here.",
-      disclaimer: "Launch promotion subject to property size and service level."
+      disclaimer: "Launch promotion subject to property size and service level.",
+      wa: "Hello, I want to hire a cleaning plan for my tourist apartment in Torrevieja."
     },
     s5: {
       title_new: "13 years of Luxembourg standard.",
@@ -593,7 +601,8 @@ const translations: Record<LanguageCode, Translation> = {
       desc_new: "If you don't want problems, resolve it now.",
       btn_new: "I want to solve it now",
       note_new: "Fast response via WhatsApp.",
-      micro_new: "When the guest enters, there is no margin."
+      micro_new: "When the guest enters, there is no margin.",
+      wa: "Hello, I am interested in securing the cleaning of my apartment in Torrevieja."
     },
     selector: {
       label: "Select your language",
@@ -652,7 +661,8 @@ const translations: Record<LanguageCode, Translation> = {
       subtitle: "Nettoyage, préparation et soutien opérationnel pour logements touristiques à Torrevieja.",
       cta: "Protéger mon appartement sur WhatsApp",
       micro: "Réponse directe. Sans formulaire. Sans perte de temps.",
-      badge_lux: "13 ans au Luxembourg"
+      badge_lux: "13 ans au Luxembourg",
+      wa: "Bonjour, je veux protéger mon appartement touristique à Torrevieja."
     },
     s2: {
       title1: "Un mauvais nettoyage",
@@ -728,7 +738,8 @@ const translations: Record<LanguageCode, Translation> = {
       a4: "Urgences le jour même",
       a5: "Soutien ponctuel ou collaboration fixe",
       close_title: "Si vous avez besoin que l'appartement soit vraiment prêt, résolvez-le ici.",
-      disclaimer: "Promotion de lancement soumise à la taille de la propriété et au niveau de service."
+      disclaimer: "Promotion de lancement soumise à la taille de la propriété et au niveau de service.",
+      wa: "Bonjour, je souhaite engager un plan de nettoyage pour mon appartement à Torrevieja."
     },
     s5: {
       title_new: "13 ans de standard luxembourgeois.",
@@ -752,7 +763,8 @@ const translations: Record<LanguageCode, Translation> = {
       desc_new: "Si vous ne voulez pas de problèmes, réglez-le maintenant.",
       btn_new: "Je veux régler cela maintenant",
       note_new: "Réponse rapide via WhatsApp.",
-      micro_new: "Quand le client entre, il n'y a plus de marge."
+      micro_new: "Quand le client entre, il n'y a plus de marge.",
+      wa: "Bonjour, je suis intéressé pour garantir le nettoyage de mon appartement à Torrevieja."
     },
     selector: {
       label: "Sélectionnez votre langue",
@@ -811,7 +823,8 @@ const translations: Record<LanguageCode, Translation> = {
       subtitle: "Reinigung, Vorbereitung und operative Unterstützung für Ferienwohnungen in Torrevieja.",
       cta: "Meine Wohnung per WhatsApp schützen",
       micro: "Direkte Antwort. Keine Formulare. Kein Zeitverlust.",
-      badge_lux: "13 Jahre in Luxemburg"
+      badge_lux: "13 Jahre in Luxemburg",
+      wa: "Hallo, ich möchte meine Ferienwohnung in Torrevieja schützen."
     },
     s2: {
       title1: "Eine schlechte Reinigung",
@@ -887,7 +900,8 @@ const translations: Record<LanguageCode, Translation> = {
       a4: "Notfälle am selben Tag",
       a5: "Punktuelle oder feste Unterstützung",
       close_title: "Wenn Sie möchten, dass die Wohnung wirklich bereit ist, klären Sie es hier.",
-      disclaimer: "Einführungsangebot abhängig von der Größe der Immobilie."
+      disclaimer: "Einführungsangebot abhängig von der Größe der Immobilie.",
+      wa: "Hallo, ich möchte einen Reinigungsplan für meine Ferienwohnung in Torrevieja buchen."
     },
     s5: {
       title_new: "13 Jahre Luxemburger Standard.",
@@ -911,7 +925,8 @@ const translations: Record<LanguageCode, Translation> = {
       desc_new: "Wenn Sie keine Probleme wollen, lösen Sie es jetzt.",
       btn_new: "Ich möchte es jetzt lösen",
       note_new: "Schnelle Antwort über WhatsApp.",
-      micro_new: "Wenn der Gast eintritt, gibt es keinen Spielraum mehr."
+      micro_new: "Wenn der Gast eintritt, gibt es keinen Spielraum mehr.",
+      wa: "Hallo, ich bin daran interessiert, die Reinigung meiner Wohnung in Torrevieja zu sichern."
     },
     selector: {
       label: "Wähle deine Sprache",
@@ -970,7 +985,8 @@ const translations: Record<LanguageCode, Translation> = {
       subtitle: "Прибирання, підготовка та оперативна підтримка туристичного житла в Торрев’єсі.",
       cta: "Захистити мою квартиру через WhatsApp",
       micro: "Пряма відповідь. Без форм. Без втрати часу.",
-      badge_lux: "13 років у Люксембурзі"
+      badge_lux: "13 років у Люксембурзі",
+      wa: "Добрий день, я хочу захистити свої туристичні апартаменти в Торрев'єсі."
     },
     s2: {
       title1: "Погане прибирання",
@@ -1046,7 +1062,8 @@ const translations: Record<LanguageCode, Translation> = {
       a4: "Термінові виклики",
       a5: "Точкова підтримка",
       close_title: "Якщо потрібно, щоб квартира справді була готова - ми допоможемо.",
-      disclaimer: "Акційна пропозиція залежить від площі."
+      disclaimer: "Акційна пропозиція залежить від площі.",
+      wa: "Добрий день, я хочу замовити план прибирання для своїх апартаментів у Торрев'єсі."
     },
     s5: {
       title_new: "13 років стандарту Люксембургу.",
@@ -1070,7 +1087,8 @@ const translations: Record<LanguageCode, Translation> = {
       desc_new: "Якщо не хочете проблем, виріште це зараз.",
       btn_new: "Вирішити зараз",
       note_new: "Швидка відповідь через WhatsApp.",
-      micro_new: "Остання перевірка перед гостем."
+      micro_new: "Остання перевірка перед гостем.",
+      wa: "Добрий день, мене цікавить забезпечення прибирання моїх апартаментів у Торрев'єсі."
     },
     selector: {
       label: "Оберіть мову",
@@ -1129,7 +1147,8 @@ const translations: Record<LanguageCode, Translation> = {
       subtitle: "Уборка, подготовка и оперативная поддержка туристического жилья в Торревьехе.",
       cta: "Защитить мою квартиру через WhatsApp",
       micro: "Прямой ответ. Без форм. Без потери времени.",
-      badge_lux: "13 лет в Люксембурге"
+      badge_lux: "13 лет в Люксембурге",
+      wa: "Здравствуйте, я хочу защитить свои туристические апартаменты в Торревьехе."
     },
     s2: {
       title1: "Плохая уборка",
@@ -1205,7 +1224,8 @@ const translations: Record<LanguageCode, Translation> = {
       a4: "Экстренные случаи",
       a5: "Разовая или постоянная поддержка",
       close_title: "Если квартира должна быть действительно готова, решайте это здесь.",
-      disclaimer: "Промоакция зависит от площади."
+      disclaimer: "Промоакция зависит от площади.",
+      wa: "Здравствуйте, я хочу заказать план уборки для своих апартаментов в Торревьехе."
     },
     s5: {
       title_new: "13 лет стандарта Люксембурга.",
@@ -1229,7 +1249,8 @@ const translations: Record<LanguageCode, Translation> = {
       desc_new: "Если не хотите проблем, решите это сейчас.",
       btn_new: "Решить сейчас",
       note_new: "Быстрый ответ в WhatsApp.",
-      micro_new: "Последняя проверка перед гостем."
+      micro_new: "Последняя проверка перед гостем.",
+      wa: "Здравствуйте, меня интересует обеспечение уборки моих апартаментов в Торревьехе."
     },
     selector: {
       label: "Выберите ваш язык",
@@ -1288,7 +1309,8 @@ const translations: Record<LanguageCode, Translation> = {
       subtitle: "Sprzątanie, przygotowanie i wsparcie operacyjne dla wynajmu turystycznego w Torrevieja.",
       cta: "Zabezpiecz mój apartament przez WhatsApp",
       micro: "Bezpośrednia odpowiedź. Bez formularzy. Bez straty czasu.",
-      badge_lux: "13 lat w Luksemburgu"
+      badge_lux: "13 lat w Luksemburgu",
+      wa: "Dzień dobry, chcę zabezpieczyć mój apartament turystyczny w Torrevieja."
     },
     s2: {
       title1: "Złe sprzątanie",
@@ -1364,7 +1386,8 @@ const translations: Record<LanguageCode, Translation> = {
       a4: "Sytuacje awaryjne",
       a5: "Doraźne wsparcie lub stała współpraca",
       close_title: "Jeśli potrzebujesz apartamentu naprawdę gotowego, rozwiąż to tutaj.",
-      disclaimer: "Promocja wprowadzająca zależy od warunków lokalu."
+      disclaimer: "Promocja wprowadzająca zależy od warunków lokalu.",
+      wa: "Dzień dobry, chcę wynająć plan sprzątania dla mojego apartamentu w Torrevieja."
     },
     s5: {
       title_new: "13 lat standardu w Luksemburgu.",
@@ -1388,7 +1411,8 @@ const translations: Record<LanguageCode, Translation> = {
       desc_new: "Jeśli nie chcesz problemów, rozwiąż to teraz.",
       btn_new: "Rozwiąż to teraz",
       note_new: "Szybka odpowiedź przez WhatsApp.",
-      micro_new: "Ostatni check przed kolejnym gościem."
+      micro_new: "Ostatni check przed kolejnym gościem.",
+      wa: "Dzień dobry, jestem zainteresowany/zainteresowana zapewnieniem sprzątania mojego apartamentu w Torrevieja."
     },
     selector: {
       label: "Wybierz swój język",
@@ -1447,7 +1471,8 @@ const translations: Record<LanguageCode, Translation> = {
       subtitle: "Schoonmaak, voorbereiding en operationele ondersteuning voor toeristische verhuur in Torrevieja.",
       cta: "Bescherm mijn appartement via WhatsApp",
       micro: "Direct antwoord. Geen formulieren. Geen tijdverlies.",
-      badge_lux: "13 jaar in Luxemburg"
+      badge_lux: "13 jaar in Luxemburg",
+      wa: "Hallo, ik wil mijn toeristenappartement in Torrevieja beschermen."
     },
     s2: {
       title1: "Een slechte schoonmaak",
@@ -1523,7 +1548,8 @@ const translations: Record<LanguageCode, Translation> = {
       a4: "Noodgevallen",
       a5: "Ondersteuning of vaste samenwerking",
       close_title: "Als uw appartement echt klaar moet zijn, regelt u het hier.",
-      disclaimer: "Lanceringspromotie afhankelijk van grootte."
+      disclaimer: "Lanceringspromotie afhankelijk van grootte.",
+      wa: "Hallo, ik wil een schoonmaakplan inhuren voor mijn appartement in Torrevieja."
     },
     s5: {
       title_new: "13 jaar Luxemburgse standaard.",
@@ -1547,7 +1573,8 @@ const translations: Record<LanguageCode, Translation> = {
       desc_new: "Als u geen problemen wilt, los het dan nu op.",
       btn_new: "Nu oplossen",
       note_new: "Snelle reactie via WhatsApp.",
-      micro_new: "Laatste controle voor de gast."
+      micro_new: "Laatste controle voor de gast.",
+      wa: "Hallo, ik ben geïnteresseerd in het beveiligen van de schoonmaak van mijn appartement in Torrevieja."
     },
     selector: {
       label: "Selecteer uw taal",
@@ -1606,7 +1633,8 @@ const translations: Record<LanguageCode, Translation> = {
       subtitle: "Städning, förberedelse och operativt stöd för turistuthyrning i Torrevieja.",
       cta: "Skydda min lägenhet via WhatsApp",
       micro: "Direkt svar. Inga formulär. Ingen tidsförlust.",
-      badge_lux: "13 år i Luxemburg"
+      badge_lux: "13 år i Luxemburg",
+      wa: "Hej, jag vill skydda min semesterlägenhet i Torrevieja."
     },
     s2: {
       title1: "En dålig städning",
@@ -1682,7 +1710,8 @@ const translations: Record<LanguageCode, Translation> = {
       a4: "Akuta fall",
       a5: "Stöd eller fast samarbete",
       close_title: "Lös det här om lägenheten måste vara helt redo.",
-      disclaimer: "Lanseringserbjudande beroende på storlek."
+      disclaimer: "Lanseringserbjudande beroende på storlek.",
+      wa: "Hej, jag vill anlita en städplan för min lägenhet i Torrevieja."
     },
     s5: {
       title_new: "13 år av Luxemburg-standard.",
@@ -1706,7 +1735,8 @@ const translations: Record<LanguageCode, Translation> = {
       desc_new: "Om du inte vill ha problem, lös det nu.",
       btn_new: "Lös det nu",
       note_new: "Snabbt svar via WhatsApp.",
-      micro_new: "Sista kollen innan gästen."
+      micro_new: "Sista kollen innan gästen.",
+      wa: "Hej, jag är intresserad av att säkra städningen av min lägenhet i Torrevieja."
     },
     selector: {
       label: "Välj ditt språk",
@@ -1765,7 +1795,8 @@ const translations: Record<LanguageCode, Translation> = {
       subtitle: "Rengjøring, forberedelse og operativ støtte for turistutleie i Torrevieja.",
       cta: "Sikre leiligheten min via WhatsApp",
       micro: "Direkte svar. Ingen skjemaer. Ingen bortkastet tid.",
-      badge_lux: "13 år i Luxembourg"
+      badge_lux: "13 år i Luxembourg",
+      wa: "Hei, jeg vil beskytte ferieleiligheten min i Torrevieja."
     },
     s2: {
       title1: "En dårlig rengjøring",
@@ -1841,7 +1872,8 @@ const translations: Record<LanguageCode, Translation> = {
       a4: "Akutte tilfeller",
       a5: "Støtte eller fast samarbeid",
       close_title: "Løs det her hvis leiligheten må være helt klar.",
-      disclaimer: "Lanseringstilbud avhengig av størrelse."
+      disclaimer: "Lanseringstilbud avhengig av størrelse.",
+      wa: "Hei, jeg vil bestille en renholdsplan for leiligheten min i Torrevieja."
     },
     s5: {
       title_new: "13 år med Luxembourg-standard.",
@@ -1865,7 +1897,8 @@ const translations: Record<LanguageCode, Translation> = {
       desc_new: "Hvis du ikke vil ha problemer, løs det nå.",
       btn_new: "Løs det nå",
       note_new: "Raskt svar via WhatsApp.",
-      micro_new: "Siste sjekk før gjesten."
+      micro_new: "Siste sjekk før gjesten.",
+      wa: "Hei, jeg er interessert i å sikre renholdet av leiligheten min i Torrevieja."
     },
     selector: {
       label: "Velg ditt språk",

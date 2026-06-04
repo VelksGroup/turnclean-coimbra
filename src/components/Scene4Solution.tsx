@@ -192,7 +192,7 @@ export function Scene4Solution() {
             </div>
 
             <a 
-              href={`Hola.%20Necessito%20el%20servicio%20SOLO%20READY.`}
+              href={`${whatsappUrl}SOLO%20READY`}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full flex items-center justify-center py-4 rounded-xl font-bold text-white bg-slate-900 hover:bg-slate-800 transition-colors shadow-[0_10px_20px_-10px_rgba(0,0,0,0.3)] relative z-10"
