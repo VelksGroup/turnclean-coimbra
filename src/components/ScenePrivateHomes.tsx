@@ -15,7 +15,7 @@ export function ScenePrivateHomes() {
   }));
 
   const handleWhatsApp = () => {
-    const phone = "34664188543";
+    const phone = "34602371714";
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(t.wa_msg)}`;
     window.open(url, '_blank');
   };
