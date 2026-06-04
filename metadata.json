@@ -1,0 +1,8 @@
+{
+  "name": "Torrevieja Premium Cleaning",
+  "description": "Landing page cinematográfica para limpieza de apartamentos turísticos en Torrevieja.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

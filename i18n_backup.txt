@@ -1,0 +1,1214 @@
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+
+export type LanguageCode = 'es' | 'pt' | 'en' | 'fr' | 'de' | 'pl' | 'uk' | 'ru' | 'nl' | 'sv' | 'no';
+
+export const flags: Record<LanguageCode, string> = {
+  es: '🇪🇸',
+  pt: '🇵🇹',
+  en: '🇬🇧',
+  fr: '🇫🇷',
+  de: '🇩🇪',
+  pl: '🇵🇱',
+  uk: '🇺🇦',
+  ru: '🇷🇺',
+  nl: '🇳🇱',
+  sv: '🇸🇪',
+  no: '🇳🇴'
+};
+
+interface Translation {
+  hero: {
+    tagline: string;
+    chip1: string;
+    chip2: string;
+    title1: string;
+    title2: string;
+    subtitle: string;
+    cta: string;
+    micro: string;
+  };
+  s2: {
+    title1: string;
+    title2: string;
+    sub: string;
+    micro: string;
+    c1: string;
+    c1_sub: string;
+    c2: string;
+    c2_sub: string;
+    c3: string;
+    c3_sub: string;
+    c4: string;
+    c4_sub: string;
+    final: string;
+  };
+  s3: {
+    title1: string;
+    title2: string;
+    title3: string;
+    sub: string;
+    step1: string;
+    step2: string;
+    step3: string;
+    step4: string;
+  };
+  s4: {
+    title: string;
+    sub: string;
+    m1: string;
+    m2: string;
+    m3: string;
+    m4: string;
+    m5: string;
+    m6: string;
+    m7: string;
+    m8: string;
+  };
+  s5: {
+    title1: string;
+    title2: string;
+    sub: string;
+    micro: string;
+  };
+  s6: {
+    title: string;
+    sub: string;
+    step1: string;
+    step2: string;
+    step3: string;
+    step4: string;
+  };
+  s7: {
+    title1: string;
+    title2: string;
+    sub: string;
+    cta: string;
+    micro: string;
+  };
+  selector: {
+    label: string;
+    hint: string;
+  };
+  gallery: {
+    title1: string;
+    title2: string;
+    sub: string;
+    items: {
+      title: string;
+      caption: string;
+    }[];
+    before: string;
+    after: string;
+    cta: string;
+    btn: string;
+    micro: string;
+  };
+}
+
+const translations: Record<LanguageCode, Translation> = {
+  es: {
+    hero: {
+      tagline: "Limpieza turística · llaves · check-in",
+      chip1: "Luxemburgo · PT/ES/FR",
+      chip2: "Mañana · tarde · noche · fuera de horario",
+      title1: "Tu apartamento no puede fallar en",
+      title2: "temporada alta.",
+      subtitle: "Limpieza, preparación y apoyo operativo para alojamientos turísticos en Torrevieja.",
+      cta: "Proteger mi apartamento por WhatsApp",
+      micro: "Respuesta directa. Sin formularios. Sin pérdida de tiempo."
+    },
+    s2: {
+      title1: "Una mala limpieza",
+      title2: "puede costar una reserva.",
+      sub: "En temporada alta, un error pequeño se convierte en una mala reseña.",
+      micro: "No arriesgues una reserva de 2.000€ por una limpieza mal preparada.",
+      c1: "Check-in retrasado",
+      c1_sub: "El huésped espera. La reseña baja.",
+      c2: "Huésped insatisfecho",
+      c2_sub: "Una foto suya puede destruir tu confianza.",
+      c3: "Review negativa",
+      c3_sub: "Menos estrellas. Menos reservas.",
+      c4: "Dinero perdido",
+      c4_sub: "El error pequeño se paga grande.",
+      final: "El coste real no es limpiar. Es fallar."
+    },
+    s3: {
+      title1: "Check-out por la mañana.",
+      title2: "Check-in por la tarde.",
+      title3: "Cero margen.",
+      sub: "Cuando el tiempo aprieta, el apartamento tiene que estar listo. Sin excusas.",
+      step1: "Salida del huésped",
+      step2: "Limpieza",
+      step3: "Revisión",
+      step4: "Entrada del nuevo huésped"
+    },
+    s4: {
+      title: "Aquí entra el servicio.",
+      sub: "Limpieza. Preparación. Revisión. Entrega.",
+      m1: "Limpieza entre huéspedes",
+      m2: "Preparación del apartamento",
+      m3: "Revisión post check-out",
+      m4: "Fotos de estado",
+      m5: "Entrega de llaves",
+      m6: "Check-in / check-out",
+      m7: "Limpieza profunda",
+      m8: "Limpieza post-obra"
+    },
+    s5: {
+      title1: "Experiencia profesional",
+      title2: "en Luxemburgo.",
+      sub: "Casas privadas. Oficinas. Post-obra. Industrial. Espacios exigentes.",
+      micro: "Trabajo rápido, discreto y con atención al detalle."
+    },
+    s6: {
+      title: "Simple. Directo. Sin fricción.",
+      sub: "Menos llamadas. Más solución.",
+      step1: "Envías WhatsApp",
+      step2: "Confirmamos zona y horario",
+      step3: "Se realiza el servicio",
+      step4: "Recibes confirmación y fotos"
+    },
+    s7: {
+      title1: "Si el apartamento no está listo,",
+      title2: "pierdes dinero.",
+      sub: "La alta temporada no espera. El huésped tampoco.",
+      cta: "Quiero resolverlo por WhatsApp",
+      micro: "Organiza antes de que el próximo check-in se convierta en un problema."
+    },
+    selector: {
+      label: "Selecciona tu idioma",
+      hint: "Desliza para ver más idiomas"
+    },
+    gallery: {
+      title1: "El cambio se nota",
+      title2: "antes del check-in.",
+      sub: "De usado a listo. De problema a control. Así debe verse un apartamento antes de recibir al próximo huésped.",
+      items: [
+        {
+          title: "Cocina lista antes del check-in",
+          caption: "De uso real a espacio limpio, ordenado y preparado."
+        },
+        {
+          title: "Baño limpio. Huésped tranquilo.",
+          caption: "Espejo, lavabo, encimera y detalles bajo control antes de recibir."
+        },
+        {
+          title: "Limpieza profunda visible.",
+          caption: "Cuando el estado exige más, el resultado tiene que verse."
+        }
+      ],
+      before: "ANTES",
+      after: "DESPUÉS",
+      cta: "¿Quieres este nivel antes del próximo huésped?",
+      btn: "Pedir disponibilidad por WhatsApp",
+      micro: "Respuesta rápida. Coordinación directa. Sin pérdida de tiempo."
+    }},
+  pt: {
+    hero: {
+      tagline: "Limpeza turística · chaves · check-in",
+      chip1: "Luxemburgo · PT/ES/FR",
+      chip2: "Manhã · tarde · noite · fora de horário",
+      title1: "O teu apartamento não pode falhar na",
+      title2: "alta temporada.",
+      subtitle: "Limpeza, preparação e apoio operacional para alojamentos turísticos em Torrevieja.",
+      cta: "Proteger o meu apartamento pelo WhatsApp",
+      micro: "Resposta direta. Sem formulários. Sem perda de tempo."
+    },
+    s2: {
+      title1: "Uma má limpeza",
+      title2: "pode custar uma reserva.",
+      sub: "Na época alta, um pequeno erro transforma-se numa má avaliação.",
+      micro: "Não arrisques uma reserva de 2.000€ por uma limpeza mal preparada.",
+      c1: "Check-in atrasado",
+      c1_sub: "O hóspede espera. A avaliação desce.",
+      c2: "Hóspede insatisfeito",
+      c2_sub: "Uma foto dele pode destruir a tua confiança.",
+      c3: "Review negativa",
+      c3_sub: "Menos estrelas. Menos reservas.",
+      c4: "Dinheiro perdido",
+      c4_sub: "O pequeno erro paga-se caro.",
+      final: "O custo real não é limpar. É falhar."
+    },
+    s3: {
+      title1: "Check-out de manhã.",
+      title2: "Check-in à tarde.",
+      title3: "Margem zero.",
+      sub: "Quando o tempo aperta, o apartamento tem que estar pronto. Sem desculpas.",
+      step1: "Saída do hóspede",
+      step2: "Limpeza",
+      step3: "Revisão",
+      step4: "Entrada do novo hóspede"
+    },
+    s4: {
+      title: "É aqui que entra o serviço.",
+      sub: "Limpeza. Preparação. Revisão. Entrega.",
+      m1: "Limpeza entre hóspedes",
+      m2: "Preparação do apartamento",
+      m3: "Revisão pós check-out",
+      m4: "Fotos do estado",
+      m5: "Entrega de chaves",
+      m6: "Check-in / check-out",
+      m7: "Limpeza profunda",
+      m8: "Limpeza pós-obra"
+    },
+    s5: {
+      title1: "Experiência profissional",
+      title2: "no Luxemburgo.",
+      sub: "Casas privadas. Escritórios. Pós-obra. Industrial. Espaços exigentes.",
+      micro: "Trabalho rápido, discreto e com atenção ao detalhe."
+    },
+    s6: {
+      title: "Simples. Direto. Sem fricção.",
+      sub: "Menos chamadas. Mais solução.",
+      step1: "Envias WhatsApp",
+      step2: "Confirmamos zona e horário",
+      step3: "Realizamos o serviço",
+      step4: "Recebes confirmação e fotos"
+    },
+    s7: {
+      title1: "Se o apartamento não estiver pronto,",
+      title2: "perdes dinheiro.",
+      sub: "A alta temporada não espera. O hóspede também não.",
+      cta: "Quero resolver pelo WhatsApp",
+      micro: "Organiza antes que o próximo check-in se torne um problema."
+    },
+    selector: {
+      label: "Selecione o seu idioma",
+      hint: "Deslize para ver mais idiomas"
+    },
+    gallery: {
+      title1: "A mudança nota-se",
+      title2: "antes do check-in.",
+      sub: "De usado a pronto. De problema a controlo. É assim que um apartamento deve estar antes de receber o próximo hóspede.",
+      items: [
+        {
+          title: "Cozinha pronta antes do check-in",
+          caption: "De uso real a espaço limpo, ordenado e preparado."
+        },
+        {
+          title: "Casa de banho limpa. Hóspede tranquilo.",
+          caption: "Espelho, lavatório, bancada e detalhes sob controlo."
+        },
+        {
+          title: "Limpeza profunda visível.",
+          caption: "Quando o estado exige mais, o resultado tem que se ver."
+        }
+      ],
+      before: "ANTES",
+      after: "DEPOIS",
+      cta: "Queres este nível antes do próximo hóspede?",
+      btn: "Pedir disponibilidade pelo WhatsApp",
+      micro: "Resposta rápida. Coordenação direta. Sem perda de tempo."
+    }},
+  en: {
+    hero: {
+      tagline: "Tourist cleaning · keys · check-in",
+      chip1: "Luxembourg · PT/ES/FR",
+      chip2: "Morning · afternoon · night · out of hours",
+      title1: "Your apartment cannot fail in",
+      title2: "high season.",
+      subtitle: "Cleaning, preparation and operational support for tourist rentals in Torrevieja.",
+      cta: "Protect my apartment on WhatsApp",
+      micro: "Direct reply. No forms. No wasted time."
+    },
+    s2: {
+      title1: "A bad cleaning",
+      title2: "can cost a booking.",
+      sub: "In high season, a small mistake turns into a bad review.",
+      micro: "Don't risk a €2,000 booking for a poorly prepared cleaning.",
+      c1: "Delayed check-in",
+      c1_sub: "The guest waits. The review drops.",
+      c2: "Dissatisfied guest",
+      c2_sub: "A single photo can destroy their trust.",
+      c3: "Negative review",
+      c3_sub: "Fewer stars. Fewer bookings.",
+      c4: "Lost money",
+      c4_sub: "A small mistake costs a lot.",
+      final: "The real cost isn't cleaning. It's failing."
+    },
+    s3: {
+      title1: "Morning check-out.",
+      title2: "Afternoon check-in.",
+      title3: "Zero margin.",
+      sub: "When time is tight, the apartment must be ready. No excuses.",
+      step1: "Guest check-out",
+      step2: "Cleaning",
+      step3: "Inspection",
+      step4: "New guest check-in"
+    },
+    s4: {
+      title: "This is where the service comes in.",
+      sub: "Cleaning. Preparation. Inspection. Handover.",
+      m1: "Cleaning between guests",
+      m2: "Apartment preparation",
+      m3: "Post check-out inspection",
+      m4: "Status photos",
+      m5: "Key delivery",
+      m6: "Check-in / check-out",
+      m7: "Deep cleaning",
+      m8: "Post-renovation cleaning"
+    },
+    s5: {
+      title1: "Professional experience",
+      title2: "in Luxembourg.",
+      sub: "Private homes. Offices. Post-renovation. Industrial. Demanding spaces.",
+      micro: "Fast, discreet work with attention to detail."
+    },
+    s6: {
+      title: "Simple. Direct. Frictionless.",
+      sub: "Fewer calls. More solutions.",
+      step1: "Send a WhatsApp",
+      step2: "We confirm area and time",
+      step3: "Service is performed",
+      step4: "You receive confirmation and photos"
+    },
+    s7: {
+      title1: "If the apartment is not ready,",
+      title2: "you lose money.",
+      sub: "High season does not wait. Neither does the guest.",
+      cta: "I want to solve it on WhatsApp",
+      micro: "Organize before the next check-in becomes a problem."
+    },
+    selector: {
+      label: "Select your language",
+      hint: "Swipe to see more languages"
+    },
+    gallery: {
+      title1: "The change is noticed",
+      title2: "before check-in.",
+      sub: "From used to ready. From problem to control. This is how an apartment should look before receiving the next guest.",
+      items: [
+        {
+          title: "Kitchen ready before check-in",
+          caption: "From real use to a clean, tidy, and prepared space."
+        },
+        {
+          title: "Clean bathroom. Calm guest.",
+          caption: "Mirror, sink, countertop, and details under control."
+        },
+        {
+          title: "Visible deep cleaning.",
+          caption: "When the state demands more, the result must be visible."
+        }
+      ],
+      before: "BEFORE",
+      after: "AFTER",
+      cta: "Do you want this level before the next guest?",
+      btn: "Request availability via WhatsApp",
+      micro: "Fast response. Direct coordination. No wasting time."
+    }},
+  fr: {
+    hero: {
+      tagline: "Nettoyage touristique · clés · check-in",
+      chip1: "Luxembourg · PT/ES/FR",
+      chip2: "Matin · après-midi · nuit · hors horaires",
+      title1: "Votre appartement ne peut pas échouer en",
+      title2: "haute saison.",
+      subtitle: "Nettoyage, préparation et soutien opérationnel pour logements touristiques à Torrevieja.",
+      cta: "Protéger mon appartement sur WhatsApp",
+      micro: "Réponse directe. Sans formulaire. Sans perte de temps."
+    },
+    s2: {
+      title1: "Un mauvais nettoyage",
+      title2: "peut coûter une réservation.",
+      sub: "En haute saison, la moindre erreur se transforme en un mauvais commentaire.",
+      micro: "Ne risquez pas une réservation de 2 000 € pour un nettoyage mal préparé.",
+      c1: "Check-in retardé",
+      c1_sub: "Le client attend. La note baisse.",
+      c2: "Client insatisfait",
+      c2_sub: "Une seule de ses photos peut détruire votre réputation.",
+      c3: "Avis négatif",
+      c3_sub: "Moins d'étoiles. Moins de réservations.",
+      c4: "Argent perdu",
+      c4_sub: "La petite erreur coûte cher.",
+      final: "Le vrai coût n'est pas de nettoyer. C'est d'échouer."
+    },
+    s3: {
+      title1: "Check-out le matin.",
+      title2: "Check-in l’après-midi.",
+      title3: "Zéro marge.",
+      sub: "Quand le temps presse, l'appartement doit être prêt. Sans excuses.",
+      step1: "Départ du voyageur",
+      step2: "Nettoyage",
+      step3: "Inspection",
+      step4: "Arrivée du nouveau voyageur"
+    },
+    s4: {
+      title: "C’est ici que le service intervient.",
+      sub: "Nettoyage. Préparation. Inspection. Remise.",
+      m1: "Nettoyage entre voyageurs",
+      m2: "Préparation de l'appartement",
+      m3: "Inspection post check-out",
+      m4: "Photos d'état",
+      m5: "Remise des clés",
+      m6: "Check-in / check-out",
+      m7: "Nettoyage en profondeur",
+      m8: "Nettoyage de fin de chantier"
+    },
+    s5: {
+      title1: "Expérience professionnelle",
+      title2: "au Luxembourg.",
+      sub: "Maisons privées. Bureaux. Fin de chantier. Industriel. Espaces exigeants.",
+      micro: "Travail rapide, discret et avec le sens du détail."
+    },
+    s6: {
+      title: "Simple. Direct. Sans friction.",
+      sub: "Moins d'appels. Plus de solutions.",
+      step1: "Vous envoyez un WhatsApp",
+      step2: "Nous confirmons la zone et l'heure",
+      step3: "Le service est effectué",
+      step4: "Vous recevez la confirmation et les photos"
+    },
+    s7: {
+      title1: "Si l’appartement n’est pas prêt,",
+      title2: "vous perdez de l’argent.",
+      sub: "La haute saison n’attend pas. Le voyageur non plus.",
+      cta: "Je veux régler cela sur WhatsApp",
+      micro: "Organisez avant que le prochain check-in ne devienne un problème."
+    },
+    selector: {
+      label: "Sélectionnez votre langue",
+      hint: "Glissez pour voir plus"
+    },
+    gallery: {
+      title1: "Le changement se remarque",
+      title2: "avant le check-in.",
+      sub: "D'utilisé à prêt. De problème à contrôle. Voici à quoi doit ressembler un appartement avant de recevoir le prochain client.",
+      items: [
+        {
+          title: "Cuisine prête avant le check-in",
+          caption: "De l'utilisation réelle à un espace propre, rangé et préparé."
+        },
+        {
+          title: "Salle de bain propre. Client serein.",
+          caption: "Miroir, lavabo, plan de travail et détails sous contrôle."
+        },
+        {
+          title: "Nettoyage en profondeur visible.",
+          caption: "Lorsque l'état exige plus, le résultat doit être visible."
+        }
+      ],
+      before: "AVANT",
+      after: "APRÈS",
+      cta: "Voulez-vous ce niveau avant le prochain client ?",
+      btn: "Demander la disponibilité sur WhatsApp",
+      micro: "Réponse rapide. Coordination directe. Pas de perte de temps."
+    }},
+  de: {
+    hero: {
+      tagline: "Tourist. Reinigung · Schlüssel · Check-in",
+      chip1: "Luxemburg · PT/ES/FR",
+      chip2: "Morgen · Nachmittag · Nacht · außerhalb der Zeiten",
+      title1: "Ihre Wohnung darf nicht scheitern in der",
+      title2: "Hochsaison.",
+      subtitle: "Reinigung, Vorbereitung und operative Unterstützung für Ferienwohnungen in Torrevieja.",
+      cta: "Meine Wohnung per WhatsApp schützen",
+      micro: "Direkte Antwort. Keine Formulare. Kein Zeitverlust."
+    },
+    s2: {
+      title1: "Eine schlechte Reinigung",
+      title2: "kann eine Buchung kosten.",
+      sub: "In der Hochsaison wird ein kleiner Fehler zu einer schlechten Bewertung.",
+      micro: "Riskieren Sie keine 2.000 €-Buchung für eine schlecht vorbereitete Reinigung.",
+      c1: "Verspäteter Check-in",
+      c1_sub: "Der Gast wartet. Die Bewertung sinkt.",
+      c2: "Unzufriedener Gast",
+      c2_sub: "Ein Foto von ihm kann Ihr Vertrauen zerstören.",
+      c3: "Negative Bewertung",
+      c3_sub: "Weniger Sterne. Weniger Buchungen.",
+      c4: "Geldverlust",
+      c4_sub: "Der kleine Fehler kostet viel.",
+      final: "Die wahren Kosten sind nicht das Putzen. Es ist das Scheitern."
+    },
+    s3: {
+      title1: "Check-out am Morgen.",
+      title2: "Check-in am Nachmittag.",
+      title3: "Null Spielraum.",
+      sub: "Wenn die Zeit drängt, muss die Wohnung bereit sein. Keine Ausreden.",
+      step1: "Abreise des Gastes",
+      step2: "Reinigung",
+      step3: "Inspektion",
+      step4: "Ankunft des neuen Gastes"
+    },
+    s4: {
+      title: "Hier kommt der Service ins Spiel.",
+      sub: "Reinigung. Vorbereitung. Inspektion. Übergabe.",
+      m1: "Reinigung zwischen Gästen",
+      m2: "Wohnungsvorbereitung",
+      m3: "Inspektion nach Check-out",
+      m4: "Zustandsfotos",
+      m5: "Schlüsselübergabe",
+      m6: "Check-in / Check-out",
+      m7: "Tiefenreinigung",
+      m8: "Bauendreinigung"
+    },
+    s5: {
+      title1: "Berufserfahrung",
+      title2: "in Luxemburg.",
+      sub: "Privathäuser. Büros. Bauendreinigung. Industrie. Anspruchsvolle Räume.",
+      micro: "Schnelles, diskretes Arbeiten mit Liebe zum Detail."
+    },
+    s6: {
+      title: "Einfach. Direkt. Reibungslos.",
+      sub: "Weniger Anrufe. Mehr Lösungen.",
+      step1: "WhatsApp senden",
+      step2: "Wir bestätigen Bereich und Zeit",
+      step3: "Service wird durchgeführt",
+      step4: "Sie erhalten Bestätigung und Fotos"
+    },
+    s7: {
+      title1: "Wenn die Wohnung nicht bereit ist,",
+      title2: "verlieren Sie Geld.",
+      sub: "Die Hochsaison wartet nicht. Der Gast auch nicht.",
+      cta: "Ich möchte es per WhatsApp lösen",
+      micro: "Organisieren Sie, bevor der nächste Check-in zum Problem wird."
+    },
+    selector: {
+      label: "Wähle deine Sprache",
+      hint: "Wischen für mehr Sprachen"
+    },
+    gallery: {
+      title1: "Die Veränderung ist sichtbar",
+      title2: "vor dem Check-in.",
+      sub: "Von gebraucht zu bereit. Vom Problem zur Kontrolle. So sollte eine Wohnung vor dem Empfang des nächsten Gastes aussehen.",
+      items: [
+        {
+          title: "Küche bereit vor dem Check-in",
+          caption: "Von der tatsächlichen Nutzung zu einem sauberen Raum."
+        },
+        {
+          title: "Sauberes Bad. Ruhiger Gast.",
+          caption: "Spiegel, Waschbecken, Arbeitsplatte und Details unter Kontrolle."
+        },
+        {
+          title: "Sichtbare Tiefenreinigung.",
+          caption: "Wenn der Zustand mehr erfordert, muss das Ergebnis sichtbar sein."
+        }
+      ],
+      before: "VORHER",
+      after: "NACHHER",
+      cta: "Möchten Sie dieses Niveau vor dem nächsten Gast?",
+      btn: "Verfügbarkeit per WhatsApp anfragen",
+      micro: "Schnelle Antwort. Direkte Koordination. Kein Zeitverlust."
+    }},
+  uk: {
+    hero: {
+      tagline: "Туристичне прибирання · ключі · check-in",
+      chip1: "Люксембург · PT/ES/FR",
+      chip2: "Ранок · день · ніч · поза графіком",
+      title1: "Ваша квартира не може підвести у",
+      title2: "високий сезон.",
+      subtitle: "Прибирання, підготовка та оперативна підтримка туристичного житла в Торрев’єсі.",
+      cta: "Захистити мою квартиру через WhatsApp",
+      micro: "Пряма відповідь. Без форм. Без втрати часу."
+    },
+    s2: {
+      title1: "Погане прибирання",
+      title2: "може коштувати бронювання.",
+      sub: "У високий сезон невелика помилка перетворюється на поганий відгук.",
+      micro: "Не ризикуйте бронюванням на 2000 євро через погану підготовку.",
+      c1: "Затриманий check-in",
+      c1_sub: "Гість чекає. Оцінка падає.",
+      c2: "Незадоволений гість",
+      c2_sub: "Його фото може зруйнувати вашу довіру.",
+      c3: "Негативний відгук",
+      c3_sub: "Менше зірок. Менше бронювань.",
+      c4: "Втрачені гроші",
+      c4_sub: "Невелика помилка коштує дорого.",
+      final: "Справжня ціна — це не прибирання. Це невдача."
+    },
+    s3: {
+      title1: "Check-out вранці.",
+      title2: "Check-in вдень.",
+      title3: "Нульовий запас.",
+      sub: "Коли час тисне, квартира має бути готова. Без виправдань.",
+      step1: "Виїзд гостя",
+      step2: "Прибирання",
+      step3: "Перевірка",
+      step4: "Заїзд нового гостя"
+    },
+    s4: {
+      title: "Тут вступає в дію сервіс.",
+      sub: "Прибирання. Підготовка. Перевірка. Передача.",
+      m1: "Прибирання між гостями",
+      m2: "Підготовка квартири",
+      m3: "Перевірка після check-out",
+      m4: "Фото стану",
+      m5: "Передача ключів",
+      m6: "Check-in / check-out",
+      m7: "Генеральне прибирання",
+      m8: "Прибирання після ремонту"
+    },
+    s5: {
+      title1: "Професійний досвід",
+      title2: "у Люксембурзі.",
+      sub: "Приватні будинки. Офіси. Після ремонту. Промислові. Вимогливі приміщення.",
+      micro: "Швидка, дискретна робота з увагою до деталей."
+    },
+    s6: {
+      title: "Просто. Прямо. Без тертя.",
+      sub: "Менше дзвінків. Більше рішень.",
+      step1: "Надсилаєте WhatsApp",
+      step2: "Ми підтверджуємо район та час",
+      step3: "Послуга виконується",
+      step4: "Ви отримуєте підтвердження та фото"
+    },
+    s7: {
+      title1: "Якщо квартира не готова,",
+      title2: "ви втрачаєте гроші.",
+      sub: "Високий сезон не чекає. Гість також.",
+      cta: "Хочу вирішити це через WhatsApp",
+      micro: "Організуйте все до того, як наступний check-in стане проблемою."
+    },
+    selector: {
+      label: "Оберіть мову",
+      hint: "Проведіть для більшого"
+    },
+    gallery: {
+      title1: "Зміни помітні",
+      title2: "до check-in.",
+      sub: "Від використаного до готового. Від проблеми до контролю.",
+      items: [
+        {
+          title: "Кухня готова до check-in",
+          caption: "Від реального використання до чистого простору."
+        },
+        {
+          title: "Чиста ванна. Спокійний гість.",
+          caption: "Дзеркало, раковина, стільниця та деталі під контролем."
+        },
+        {
+          title: "Видиме глибоке прибирання.",
+          caption: "Коли стан вимагає більшого, результат має бути видимим."
+        }
+      ],
+      before: "ДО",
+      after: "ПІСЛЯ",
+      cta: "Хочете такий рівень перед наступним гостем?",
+      btn: "Запитати доступність через WhatsApp",
+      micro: "Швидка відповідь. Пряма координація. Без втрати часу."
+    }},
+  ru: {
+    hero: {
+      tagline: "Туристическая уборка · ключи · check-in",
+      chip1: "Люксембург · PT/ES/FR",
+      chip2: "Утро · день · ночь · вне графика",
+      title1: "Ваша квартира не может подвести в",
+      title2: "высокий сезон.",
+      subtitle: "Уборка, подготовка и оперативная поддержка туристического жилья в Торревьехе.",
+      cta: "Защитить мою квартиру через WhatsApp",
+      micro: "Прямой ответ. Без форм. Без потери времени."
+    },
+    s2: {
+      title1: "Плохая уборка",
+      title2: "может стоить бронирования.",
+      sub: "В высокий сезон небольшая ошибка оборачивается плохим отзывом.",
+      micro: "Не рискуйте бронированием на 2000 евро из-за плохой подготовки.",
+      c1: "Задержанный check-in",
+      c1_sub: "Гость ждет. Оценка падает.",
+      c2: "Недовольный гость",
+      c2_sub: "Его фото может разрушить ваше доверие.",
+      c3: "Негативный отзыв",
+      c3_sub: "Меньше звезд. Меньше бронирований.",
+      c4: "Потерянные деньги",
+      c4_sub: "Маленькая ошибка стоит дорого.",
+      final: "Настоящая цена — это не уборка. Это провал."
+    },
+    s3: {
+      title1: "Check-out утром.",
+      title2: "Check-in днём.",
+      title3: "Нулевой запас.",
+      sub: "Когда время поджимает, квартира должна быть готова. Без оправданий.",
+      step1: "Выезд гостя",
+      step2: "Уборка",
+      step3: "Проверка",
+      step4: "Заезд нового гостя"
+    },
+    s4: {
+      title: "Здесь вступает в работу сервис.",
+      sub: "Уборка. Подготовка. Проверка. Передача.",
+      m1: "Уборка между гостями",
+      m2: "Подготовка квартиры",
+      m3: "Проверка после check-out",
+      m4: "Фото состояния",
+      m5: "Передача ключей",
+      m6: "Check-in / check-out",
+      m7: "Генеральная уборка",
+      m8: "Уборка после ремонта"
+    },
+    s5: {
+      title1: "Профессиональный опыт",
+      title2: "в Люксембурге.",
+      sub: "Частные дома. Офисы. После ремонта. Промышленные. Требовательные помещения.",
+      micro: "Быстрая, незаметная работа с вниманием к деталям."
+    },
+    s6: {
+      title: "Просто. Прямо. Без трения.",
+      sub: "Меньше звонков. Больше решений.",
+      step1: "Отправляете WhatsApp",
+      step2: "Мы подтверждаем район и время",
+      step3: "Услуга выполняется",
+      step4: "Вы получаете подтверждение и фото"
+    },
+    s7: {
+      title1: "Если квартира не готова,",
+      title2: "вы теряете деньги.",
+      sub: "Высокий сезон не ждёт. Гость тоже.",
+      cta: "Хочу решить это через WhatsApp",
+      micro: "Организуйте всё до того, как следующий check-in станет проблемой."
+    },
+    selector: {
+      label: "Выберите ваш язык",
+      hint: "Проведите для большего"
+    },
+    gallery: {
+      title1: "Изменения заметны",
+      title2: "до check-in.",
+      sub: "От использованного к готовому. От проблемы к контролю.",
+      items: [
+        {
+          title: "Кухня готова к check-in",
+          caption: "От реального использования к чистому пространству."
+        },
+        {
+          title: "Чистая ванная. Спокойный гость.",
+          caption: "Зеркало, раковина, столешница и детали под контролем."
+        },
+        {
+          title: "Видимая глубокая уборка.",
+          caption: "Когда состояние требует большего, результат должен быть видимым."
+        }
+      ],
+      before: "ДО",
+      after: "ПОСЛЕ",
+      cta: "Хотите такой уровень перед следующим гостем?",
+      btn: "Узнать доступность через WhatsApp",
+      micro: "Быстрый ответ. Прямая координация. Без потери времени."
+    }},
+  pl: {
+    hero: {
+      tagline: "Sprzątanie turystyczne · klucze · check-in",
+      chip1: "Luksemburg · PT/ES/FR",
+      chip2: "Rano · popołudnie · noc · poza godzinami",
+      title1: "Twój apartament nie może zawieść w",
+      title2: "sezonie letnim.",
+      subtitle: "Sprzątanie, przygotowanie i wsparcie operacyjne dla wynajmu turystycznego w Torrevieja.",
+      cta: "Zabezpiecz mój apartament przez WhatsApp",
+      micro: "Bezpośrednia odpowiedź. Bez formularzy. Bez straty czasu."
+    },
+    s2: {
+      title1: "Złe sprzątanie",
+      title2: "może kosztować rezerwację.",
+      sub: "W sezonie mały błąd zamienia się w złą opinię.",
+      micro: "Nie ryzykuj rezerwacji za 2000 € przez złe przygotowanie.",
+      c1: "Opóźniony check-in",
+      c1_sub: "Gość czeka. Ocena spada.",
+      c2: "Niezadowolony gość",
+      c2_sub: "Jedno jego zdjęcie może zniszczyć twoją reputację.",
+      c3: "Negatywna opinia",
+      c3_sub: "Mniej gwiazdek. Mniej rezerwacji.",
+      c4: "Stracone pieniądze",
+      c4_sub: "Mały błąd kosztuje dużo.",
+      final: "Prawdziwym kosztem nie jest sprzątanie. Jest nim porażka."
+    },
+    s3: {
+      title1: "Check-out rano.",
+      title2: "Check-in po południu.",
+      title3: "Zerowy margines.",
+      sub: "Kiedy brakuje czasu, apartament musi być gotowy. Bez wymówek.",
+      step1: "Wyjazd gościa",
+      step2: "Sprzątanie",
+      step3: "Inspekcja",
+      step4: "Przyjazd nowego gościa"
+    },
+    s4: {
+      title: "Tutaj wkracza nasz serwis.",
+      sub: "Sprzątanie. Przygotowanie. Inspekcja. Przekazanie.",
+      m1: "Sprzątanie między gośćmi",
+      m2: "Przygotowanie apartamentu",
+      m3: "Inspekcja po check-out",
+      m4: "Zdjęcia stanu",
+      m5: "Przekazanie kluczy",
+      m6: "Check-in / check-out",
+      m7: "Głębokie sprzątanie",
+      m8: "Sprzątanie poremontowe"
+    },
+    s5: {
+      title1: "Doświadczenie zawodowe",
+      title2: "w Luksemburgu.",
+      sub: "Domy prywatne. Biura. Po remoncie. Przemysł. Wymagające przestrzenie.",
+      micro: "Szybka, dyskretna praca z dbałością o szczegóły."
+    },
+    s6: {
+      title: "Prosto. Bezpośrednio. Bez tarcia.",
+      sub: "Mniej telefonów. Więcej rozwiązań.",
+      step1: "Wysyłasz WhatsApp",
+      step2: "Potwierdzamy strefę i czas",
+      step3: "Usługa zostaje wykonana",
+      step4: "Otrzymujesz potwierdzenie i zdjęcia"
+    },
+    s7: {
+      title1: "Jeśli apartament nie jest gotowy,",
+      title2: "tracisz pieniądze.",
+      sub: "Wysoki sezon nie czeka. Gość również.",
+      cta: "Chcę to rozwiązać przez WhatsApp",
+      micro: "Zorganizuj wszystko, zanim kolejny check-in stanie się problemem."
+    },
+    selector: {
+      label: "Wybierz swój język",
+      hint: "Przesuń, aby zobaczyć więcej"
+    },
+    gallery: {
+      title1: "Zmianę widać",
+      title2: "przed check-inem.",
+      sub: "Od używanego po gotowy. Tak powinien wyglądać apartament przed przyjęciem gościa.",
+      items: [
+        {
+          title: "Kuchnia gotowa przed check-in",
+          caption: "Od rzeczywistego użytkowania po czystą, funkcjonalną przestrzeń."
+        },
+        {
+          title: "Czysta łazienka. Spokojny gość.",
+          caption: "Lustro, umywalka, blat i detale pod kontrolą."
+        },
+        {
+          title: "Widoczne głębokie czyszczenie.",
+          caption: "Gdy stan wymaga więcej, wynik musi być widoczny."
+        }
+      ],
+      before: "PRZED",
+      after: "PO",
+      cta: "Chcesz takiego poziomu przed kolejnym gościem?",
+      btn: "Zapytaj o dostępność na WhatsApp",
+      micro: "Szybka odpowiedź. Bezpośrednia koordynacja. Bez straty czasu."
+    }},
+  nl: {
+    hero: {
+      tagline: "Toeristische schoonmaak · sleutels · check-in",
+      chip1: "Luxemburg · PT/ES/FR",
+      chip2: "Ochtend · middag · nacht · buiten kantooruren",
+      title1: "Je appartement mag niet falen in het",
+      title2: "hoogseizoen.",
+      subtitle: "Schoonmaak, voorbereiding en operationele ondersteuning voor toeristische verhuur in Torrevieja.",
+      cta: "Bescherm mijn appartement via WhatsApp",
+      micro: "Direct antwoord. Geen formulieren. Geen tijdverlies."
+    },
+    s2: {
+      title1: "Een slechte schoonmaak",
+      title2: "kan een boeking kosten.",
+      sub: "In het hoogseizoen wordt een kleine fout een slechte recensie.",
+      micro: "Riskeer geen boeking van € 2.000 voor een slecht voorbereide schoonmaak.",
+      c1: "Vertraagde check-in",
+      c1_sub: "De gast wacht. De score daalt.",
+      c2: "Ontevreden gast",
+      c2_sub: "Een foto van hem kan uw vertrouwen vernietigen.",
+      c3: "Negatieve review",
+      c3_sub: "Minder sterren. Minder boekingen.",
+      c4: "Verloren geld",
+      c4_sub: "De kleine fout kost veel.",
+      final: "De echte kosten zijn niet schoonmaken. Het is falen."
+    },
+    s3: {
+      title1: "Check-out in de ochtend.",
+      title2: "Check-in in de middag.",
+      title3: "Nul marge.",
+      sub: "Als de tijd krap is, moet het appartement klaar zijn. Geen excuses.",
+      step1: "Vertrek gast",
+      step2: "Schoonmaak",
+      step3: "Inspectie",
+      step4: "Aankomst nieuwe gast"
+    },
+    s4: {
+      title: "Hier komt onze service kijken.",
+      sub: "Schoonmaak. Voorbereiding. Inspectie. Overdracht.",
+      m1: "Schoonmaak tussen gasten",
+      m2: "Appartement voorbereiden",
+      m3: "Inspectie na check-out",
+      m4: "Statusfoto's",
+      m5: "Sleuteloverdracht",
+      m6: "Check-in / check-out",
+      m7: "Diepe schoonmaak",
+      m8: "Schoonmaak na renovatie"
+    },
+    s5: {
+      title1: "Professionele ervaring",
+      title2: "in Luxemburg.",
+      sub: "Privéwoningen. Kantoren. Na verbouwing. Industrieel. Veeleisende ruimtes.",
+      micro: "Snel, discreet werk met oog voor detail."
+    },
+    s6: {
+      title: "Simpel. Direct. Zonder wrijving.",
+      sub: "Minder telefoontjes. Meer oplossingen.",
+      step1: "Je stuurt een WhatsApp",
+      step2: "Wij bevestigen zone en tijd",
+      step3: "Service wordt uitgevoerd",
+      step4: "Je ontvangt bevestiging en foto's"
+    },
+    s7: {
+      title1: "Als het appartement niet klaar is,",
+      title2: "verlies je geld.",
+      sub: "Het hoogseizoen wacht niet. De gast ook niet.",
+      cta: "Ik wil het via WhatsApp oplossen",
+      micro: "Organiseer het voordat de volgende check-in een probleem wordt."
+    },
+    selector: {
+      label: "Selecteer uw taal",
+      hint: "Veeg voor meer talen"
+    },
+    gallery: {
+      title1: "De verandering is zichtbaar",
+      title2: "voor de check-in.",
+      sub: "Van gebruikt naar klaar. Van probleem naar controle.",
+      items: [
+        {
+          title: "Keuken klaar voor check-in",
+          caption: "Van echt gebruik naar een schone en opgeruimde ruimte."
+        },
+        {
+          title: "Schone badkamer. Rustige gast.",
+          caption: "Spiegel, wastafel, aanrecht en details onder controle."
+        },
+        {
+          title: "Zichtbare dieptereiniging.",
+          caption: "Buitengewone resultaten voor veeleisende omstandigheden."
+        }
+      ],
+      before: "VOOR",
+      after: "NA",
+      cta: "Wil je dit niveau voor de volgende gast?",
+      btn: "Vraag beschikbaarheid via WhatsApp",
+      micro: "Snel antwoord. Directe coördinatie. Geen tijdverlies."
+    }},
+  sv: {
+    hero: {
+      tagline: "Turiststädning · nycklar · incheckning",
+      chip1: "Luxemburg · PT/ES/FR",
+      chip2: "Morgon · eftermiddag · natt · utanför arbetstid",
+      title1: "Din lägenhet får inte misslyckas under",
+      title2: "högsäsong.",
+      subtitle: "Städning, förberedelse och operativt stöd för turistuthyrning i Torrevieja.",
+      cta: "Skydda min lägenhet via WhatsApp",
+      micro: "Direkt svar. Inga formulär. Ingen tidsförlust."
+    },
+    s2: {
+      title1: "En dålig städning",
+      title2: "kan kosta en bokning.",
+      sub: "Under högsäsong blir ett litet fel en dålig recension.",
+      micro: "Riskera inte en bokning på 2 000 € för en dåligt förberedd städning.",
+      c1: "Försenad incheckning",
+      c1_sub: "Gästen väntar. Betyget sjunker.",
+      c2: "Missnöjd gäst",
+      c2_sub: "Ett foto kan förstöra ditt förtroende.",
+      c3: "Negativ recension",
+      c3_sub: "Färre stjärnor. Färre bokningar.",
+      c4: "Förlorade pengar",
+      c4_sub: "Det lilla felet kostar mycket.",
+      final: "Den verkliga kostnaden är inte att städa. Det är att misslyckas."
+    },
+    s3: {
+      title1: "Utcheckning på morgonen.",
+      title2: "Incheckning på eftermiddagen.",
+      title3: "Noll marginal.",
+      sub: "När tiden är knapp måste lägenheten vara klar. Inga ursäkter.",
+      step1: "Gästens avresa",
+      step2: "Städning",
+      step3: "Inspektion",
+      step4: "Ny gäst anländer"
+    },
+    s4: {
+      title: "Det är här tjänsten kommer in.",
+      sub: "Städning. Förberedelse. Inspektion. Överlämning.",
+      m1: "Städning mellan gäster",
+      m2: "Förberedelse av lägenhet",
+      m3: "Inspektion efter utcheckning",
+      m4: "Statusbilder",
+      m5: "Nyckelöverlämning",
+      m6: "Incheckning / utcheckning",
+      m7: "Djupstädning",
+      m8: "Byggstädning"
+    },
+    s5: {
+      title1: "Professionell erfarenhet",
+      title2: "i Luxemburg.",
+      sub: "Privata hem. Kontor. Efter renovering. Industriellt. Krävande utrymmen.",
+      micro: "Snabbt, diskret arbete med känsla för detaljer."
+    },
+    s6: {
+      title: "Enkelt. Direkt. Friktionsfritt.",
+      sub: "Färre samtal. Fler lösningar.",
+      step1: "Skicka en WhatsApp",
+      step2: "Vi bekräftar område och tid",
+      step3: "Tjänsten utförs",
+      step4: "Du får bekräftelse och bilder"
+    },
+    s7: {
+      title1: "Om lägenheten inte är redo,",
+      title2: "förlorar du pengar.",
+      sub: "Högsäsongen väntar inte. Inte heller gästen.",
+      cta: "Jag vill lösa det via WhatsApp",
+      micro: "Organisera innan nästa incheckning blir ett problem."
+    },
+    selector: {
+      label: "Välj ditt språk",
+      hint: "Svep för att se fler språk"
+    },
+    gallery: {
+      title1: "Förändringen syns",
+      title2: "före incheckning.",
+      sub: "Från använd till redo. Från problem till under kontroll.",
+      items: [
+        {
+          title: "Kök redo före incheckning",
+          caption: "Från verklig användning till ett rent och prydligt utrymme."
+        },
+        {
+          title: "Rent badrum. Lugn gäst.",
+          caption: "Spegel, handfat, bänkskiva och detaljer under kontroll."
+        },
+        {
+          title: "Synlig djuprengöring.",
+          caption: "När tillståndet kräver mer måste resultatet synas."
+        }
+      ],
+      before: "FÖRE",
+      after: "EFTER",
+      cta: "Vill du ha den här nivån före nästa gäst?",
+      btn: "Fråga om tillgänglighet på WhatsApp",
+      micro: "Snabbt svar. Direkt samordning. Ingen tidsförlust."
+    }},
+  no: {
+    hero: {
+      tagline: "Turistrengjøring · nøkler · innsjekking",
+      chip1: "Luxembourg · PT/ES/FR",
+      chip2: "Morgen · ettermiddag · natt · utenom arbeidstid",
+      title1: "Leiligheten din kan ikke svikte i",
+      title2: "høysesongen.",
+      subtitle: "Rengjøring, forberedelse og operativ støtte for turistutleie i Torrevieja.",
+      cta: "Sikre leiligheten min via WhatsApp",
+      micro: "Direkte svar. Ingen skjemaer. Ingen bortkastet tid."
+    },
+    s2: {
+      title1: "En dårlig rengjøring",
+      title2: "kan koste en bestilling.",
+      sub: "I høysesongen blir en liten feil en dårlig anmeldelse.",
+      micro: "Ikke risiker en bestilling på 2000 € for en dårlig forberedt rengjøring.",
+      c1: "Forsinket innsjekking",
+      c1_sub: "Gjesten venter. Rangeringen synker.",
+      c2: "Misfornøyd gjest",
+      c2_sub: "Et bilde fra dem kan ødelegge din troverdighet.",
+      c3: "Negativ anmeldelse",
+      c3_sub: "Færre stjerner. Færre bestillinger.",
+      c4: "Tapte penger",
+      c4_sub: "Den lille feilen koster mye.",
+      final: "Den virkelige kostnaden er ikke å vaske. Det er å mislykkes."
+    },
+    s3: {
+      title1: "Utsjekk om morgenen.",
+      title2: "Innsjekk om ettermiddagen.",
+      title3: "Null margin.",
+      sub: "Når tiden er knapp, må leiligheten være klar. Ingen unnskyldninger.",
+      step1: "Gjestens avreise",
+      step2: "Rengjøring",
+      step3: "Inspeksjon",
+      step4: "Ny gjest ankommer"
+    },
+    s4: {
+      title: "Det er her vår tjeneste kommer inn.",
+      sub: "Rengjøring. Forberedelse. Inspeksjon. Overlevering.",
+      m1: "Rengjøring mellom gjester",
+      m2: "Forberedelse av leilighet",
+      m3: "Inspeksjon etter utsjekk",
+      m4: "Statusbilder",
+      m5: "Nøkkeloverlevering",
+      m6: "Innsjekk / utsjekk",
+      m7: "Dyprengjøring",
+      m8: "Byggrengjøring"
+    },
+    s5: {
+      title1: "Profesjonell erfaring",
+      title2: "i Luxembourg.",
+      sub: "Private hjem. Kontorer. Etter oppussing. Industrielt. Krevende rom.",
+      micro: "Raskt, diskret arbeid med øye for detaljer."
+    },
+    s6: {
+      title: "Enkelt. Direkte. Friksjonsfritt.",
+      sub: "Færre anrop. Flere løsninger.",
+      step1: "Send en WhatsApp",
+      step2: "Vi bekrefter område og tid",
+      step3: "Tjenesten utføres",
+      step4: "Du mottar bekreftelse og bilder"
+    },
+    s7: {
+      title1: "Hvis leiligheten ikke er klar,",
+      title2: "taper du penger.",
+      sub: "Høysesongen venter ikke. Ikke gjesten heller.",
+      cta: "Jeg vil løse det via WhatsApp",
+      micro: "Organiser det før neste innsjekk blir et problem."
+    },
+    selector: {
+      label: "Velg ditt språk",
+      hint: "Sveip for å se flere språk"
+    },
+    gallery: {
+      title1: "Endringen merkes",
+      title2: "før innsjekking.",
+      sub: "Fra brukt til klar. Fra problem til under kontroll.",
+      items: [
+        {
+          title: "Kjøkken klart før innsjekking",
+          caption: "Fra reell bruk til et rent og ryddig rom."
+        },
+        {
+          title: "Rent bad. Rolig gjest.",
+          caption: "Speil, vask, benkeplate og detaljer under kontroll."
+        },
+        {
+          title: "Synlig dyprengjøring.",
+          caption: "Når tilstanden krever mer, må resultatet synes."
+        }
+      ],
+      before: "FØR",
+      after: "ETTER",
+      cta: "Vil du ha dette nivået før neste gjest?",
+      btn: "Be om tilgjengelighet på WhatsApp",
+      micro: "Raskt svar. Direkte koordinering. Ingen tidsspille."
+    }}
+};
+
+interface I18nContextProps {
+  language: LanguageCode;
+  setLanguage: (lang: LanguageCode) => void;
+  t: Translation;
+}
+
+const I18nContext = createContext<I18nContextProps | undefined>(undefined);
+
+export function I18nProvider({ children }: { children: ReactNode }) {
+  const [language, setLanguage] = useState<LanguageCode>('es');
+
+  useEffect(() => {
+    const saved = localStorage.getItem('site_lang') as LanguageCode;
+    if (saved && flags[saved]) {
+      setLanguage(saved);
+    }
+  }, []);
+
+  const handleSetLanguage = (lang: LanguageCode) => {
+    setLanguage(lang);
+    localStorage.setItem('site_lang', lang);
+  };
+
+  return (
+    <I18nContext.Provider value={{ language, setLanguage: handleSetLanguage, t: translations[language] }}>
+      {children}
+    </I18nContext.Provider>
+  );
+}
+
+export function useI18n() {
+  const context = useContext(I18nContext);
+  if (!context) {
+    throw new Error("useI18n must be used within an I18nProvider");
+  }
+  return context;
+}
