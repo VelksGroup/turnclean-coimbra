@@ -135,6 +135,41 @@ interface Translation {
     label: string;
     hint: string;
   };
+  s8: {
+    label: string;
+    title: string;
+    sub: string;
+    c1_t: string;
+    c1_d: string;
+    c2_t: string;
+    c2_d: string;
+    c3_t: string;
+    c3_d: string;
+    badge: string;
+    badge_s: string;
+    stat1?: string;
+    stat2?: string;
+  };
+  s9: {
+    label: string;
+    title: string;
+    sub: string;
+    t1_n: string;
+    t1_p: string;
+    t1_d: string;
+    t2_n: string;
+    t2_p: string;
+    t2_d: string;
+    t3_n: string;
+    t3_p: string;
+    t3_d: string;
+    t4_n: string;
+    t4_p: string;
+    t4_d: string;
+  };
+  footer: {
+    text: string;
+  };
   privateHomes: {
     title1: string;
     title_highlight: string;
@@ -283,6 +318,41 @@ const translations: Record<LanguageCode, Translation> = {
     selector: {
       label: "Selecciona tu idioma",
       hint: "Desliza para ver más idiomas"
+    },
+    s8: {
+      label: "ATENCIÓN DIRECTA",
+      title: "Servicio local. Estándar internacional.",
+      sub: "Atendemos viviendas particulares, apartamentos turísticos y necesidades puntuales en Torrevieja y Alrededores.",
+      c1_t: "Respuesta rápida",
+      c1_d: "Contacto directo por WhatsApp sin formularios.",
+      c2_t: "Presupuesto claro",
+      c2_d: "Precios transparentes y servicio adaptado a cada vivienda.",
+      c3_t: "Experiencia internacional",
+      c3_d: "Proyecto impulsado desde Luxemburgo y operando localmente en Torrevieja y Alrededores.",
+      badge: "LUXEMBOURG × TORREVIEJA",
+      badge_s: "Visión europea. Atención local.",
+      stat1: "Años de experiencia",
+      stat2: "Propiedades gestionadas"
+    },
+    s9: {
+      label: "Testimonios",
+      title: "Propietarios que confían en nosotros.",
+      sub: "Apartamentos y viviendas gestionadas con los más altos estándares.",
+      t1_n: "Carlos R.",
+      t1_p: "Apartamento Turístico · Torrevieja Centro",
+      t1_d: "La tranquilidad de tener el check-in garantizado. Siempre dejan todo perfecto antes de la llegada de mis huéspedes. Una atención local excelente.",
+      t2_n: "María F.",
+      t2_p: "Vivienda Familiar · Punta Prima",
+      t2_d: "Como vivo fuera de España, necesito a alguien de absoluta confianza para mi casa de verano. Su nivel de limpieza y profesionalidad es increíble.",
+      t3_n: "Jens N.",
+      t3_p: "Chalet Vacacional · Los Balcones",
+      t3_d: "El servicio Duo Express es exactamente lo que necesitaba para los cambios de última hora. Rápidos, ordenados y con mucha experiencia.",
+      t4_n: "Laura S.",
+      t4_p: "Bungalow Vacacional · La Mata",
+      t4_d: "Me quitaron un peso de encima inmenso. El nivel de detalle en cada habitación es digno de un hotel de lujo. 100% recomendados."
+    },
+    footer: {
+      text: "Operación local en Torrevieja. Inspirado por estándares europeos desde Luxemburgo."
     },
     privateHomes: {
       title1: "No solo apartamentos turísticos.",
@@ -446,6 +516,41 @@ const translations: Record<LanguageCode, Translation> = {
       label: "Selecione o seu idioma",
       hint: "Deslize para ver mais idiomas"
     },
+    s8: {
+      label: "ATENDIMENTO DIRETO",
+      title: "Serviço local. Padrão internacional.",
+      sub: "Atendemos habitações particulares, apartamentos turísticos e necessidades pontuais em Torrevieja e arredores.",
+      c1_t: "Resposta rápida",
+      c1_d: "Contacto direto pelo WhatsApp sem formulários.",
+      c2_t: "Orçamento claro",
+      c2_d: "Preços transparentes e serviço adaptado a cada habitação.",
+      c3_t: "Experiência internacional",
+      c3_d: "Projeto impulsionado desde o Luxemburgo e a operar localmente em Torrevieja e arredores.",
+      badge: "LUXEMBOURG × TORREVIEJA",
+      badge_s: "Visão europeia. Atendimento local.",
+      stat1: "Anos de experiência",
+      stat2: "Propriedades geridas"
+    },
+    s9: {
+      label: "Testemunhos",
+      title: "Proprietários que confiam em nós.",
+      sub: "Apartamentos e habitações geridas com os mais altos padrões.",
+      t1_n: "Carlos R.",
+      t1_p: "Apartamento Turístico · Centro de Torrevieja",
+      t1_d: "A tranquilidade de ter o check-in garantido. Deixam sempre tudo perfeito antes da chegada dos meus hóspedes. Um excelente atendimento local.",
+      t2_n: "María F.",
+      t2_p: "Habitação Familiar · Punta Prima",
+      t2_d: "Como vivo fora de Espanha, preciso de alguém de absoluta confiança para a minha casa de verão. O seu nível de limpeza é incrível.",
+      t3_n: "Jens N.",
+      t3_p: "Moradia de Férias · Los Balcones",
+      t3_d: "O serviço Duo Express é exatamente o que eu precisava. Rápidos, organizados e muito experientes.",
+      t4_n: "Laura S.",
+      t4_p: "Bungalow Turístico · La Mata",
+      t4_d: "Tiraram-me um enorme peso das costas. O nível de detalhe em cada quarto é digno de um hotel de luxo."
+    },
+    footer: {
+      text: "Operação local em Torrevieja. Inspirado por padrões europeus a partir do Luxemburgo."
+    },
     privateHomes: {
       title1: "Não apenas apartamentos turísticos.",
       title_highlight: "Também casas que já não podem esperar.",
@@ -607,6 +712,41 @@ const translations: Record<LanguageCode, Translation> = {
     selector: {
       label: "Select your language",
       hint: "Swipe to see more languages"
+    },
+    s8: {
+      label: "DIRECT ASSISTANCE",
+      title: "Local service. International standard.",
+      sub: "We serve private homes, holiday apartments and specific needs in Torrevieja and surroundings.",
+      c1_t: "Fast response",
+      c1_d: "Direct contact via WhatsApp with no forms.",
+      c2_t: "Clear pricing",
+      c2_d: "Transparent prices and service adapted to each home.",
+      c3_t: "International experience",
+      c3_d: "Project driven from Luxembourg and operating locally in Torrevieja and Surroundings.",
+      badge: "LUXEMBOURG × TORREVIEJA",
+      badge_s: "European vision. Local care.",
+      stat1: "Years of experience",
+      stat2: "Managed properties"
+    },
+    s9: {
+      label: "Testimonials",
+      title: "Owners who trust us.",
+      sub: "Apartments and homes managed to the highest standards.",
+      t1_n: "Carlos R.",
+      t1_p: "Tourist Apartment · Torrevieja Center",
+      t1_d: "The peace of mind of having guaranteed check-ins. They always leave everything perfect before my guests arrive. Excellent local service.",
+      t2_n: "María F.",
+      t2_p: "Family Home · Punta Prima",
+      t2_d: "Since I live outside Spain, I need someone I can fully trust for my summer house. Their cleaning level is incredible.",
+      t3_n: "Jens N.",
+      t3_p: "Holiday Villa · Los Balcones",
+      t3_d: "The Duo Express service is exactly what I needed for last-minute turnovers. Fast, tidy, and very experienced.",
+      t4_n: "Laura S.",
+      t4_p: "Holiday Bungalow · La Mata",
+      t4_d: "They took a huge weight off my shoulders. The attention to detail in every room is worthy of a luxury hotel."
+    },
+    footer: {
+      text: "Local operation in Torrevieja. Inspired by European standards from Luxembourg."
     },
     privateHomes: {
       title1: "Not just tourist apartments.",
@@ -770,6 +910,41 @@ const translations: Record<LanguageCode, Translation> = {
       label: "Sélectionnez votre langue",
       hint: "Glissez pour voir plus"
     },
+    s8: {
+      label: "ASSISTANCE DIRECTE",
+      title: "Service local. Standard international.",
+      sub: "Nous intervenons dans les maisons privées, les appartements touristiques et selon vos besoins à Torrevieja et ses environs.",
+      c1_t: "Réponse rapide",
+      c1_d: "Contact direct via WhatsApp sans formulaires.",
+      c2_t: "Devis clair",
+      c2_d: "Prix transparents et service adapté à chaque logement.",
+      c3_t: "Expérience internationale",
+      c3_d: "Projet propulsé depuis le Luxembourg et opérant localement à Torrevieja et ses environs.",
+      badge: "LUXEMBOURG × TORREVIEJA",
+      badge_s: "Vision européenne. Service local.",
+      stat1: "Années d'expérience",
+      stat2: "Propriétés gérées"
+    },
+    s9: {
+      label: "Témoignages",
+      title: "Les propriétaires qui nous font confiance.",
+      sub: "Des appartements et des maisons gérés selon les normes les plus élevées.",
+      t1_n: "Carlos R.",
+      t1_p: "Appartement Touristique · Centre de Torrevieja",
+      t1_d: "La sérénité d'avoir un check-in garanti. Ils laissent toujours tout parfait avant l'arrivée de mes invités. Excellent service.",
+      t2_n: "María F.",
+      t2_p: "Maison de Famille · Punta Prima",
+      t2_d: "Comme je vis hors d'Espagne, j'ai besoin de quelqu'un de confiance. Leur niveau de nettoyage est incroyable.",
+      t3_n: "Jens N.",
+      t3_p: "Villa de Vacances · Los Balcones",
+      t3_d: "Le service Duo Express est exactement ce qu'il me fallait. Rapide, propre et avec beaucoup d'expérience.",
+      t4_n: "Laura S.",
+      t4_p: "Bungalow de Vacances · La Mata",
+      t4_d: "Ils m'ont enlevé un énorme poids. L'attention aux détails est digne d'un hôtel de luxe."
+    },
+    footer: {
+      text: "Opération locale à Torrevieja. Inspiré par les normes européennes depuis le Luxembourg."
+    },
     privateHomes: {
       title1: "Pas seulement des locations touristiques.",
       title_highlight: "Aussi des maisons qui ne peuvent plus attendre.",
@@ -931,6 +1106,41 @@ const translations: Record<LanguageCode, Translation> = {
     selector: {
       label: "Wähle deine Sprache",
       hint: "Wischen für mehr Sprachen"
+    },
+    s8: {
+      label: "DIREKTE BETREUUNG",
+      title: "Lokaler Service. Internationaler Standard.",
+      sub: "Wir betreuen Privathäuser, Ferienwohnungen und besondere Anforderungen in Torrevieja und Umgebung.",
+      c1_t: "Schnelle Antwort",
+      c1_d: "Direkter Kontakt per WhatsApp ohne Formulare.",
+      c2_t: "Klarer Kostenvoranschlag",
+      c2_d: "Transparente Preise und auf jedes Wohnhaus abgestimmter Service.",
+      c3_t: "Internationale Erfahrung",
+      c3_d: "Ein Projekt initiiert in Luxemburg mit lokaler Ausführung in Torrevieja und Umgebung.",
+      badge: "LUXEMBOURG × TORREVIEJA",
+      badge_s: "Europäische Vision. Lokale Betreuung.",
+      stat1: "Jahre Erfahrung",
+      stat2: "Verwaltete Immobilien"
+    },
+    s9: {
+      label: "Erfahrungsberichte",
+      title: "Eigentümer, die uns vertrauen.",
+      sub: "Ferienwohnungen und Häuser, die nach den höchsten Standards betreut werden.",
+      t1_n: "Carlos R.",
+      t1_p: "Ferienwohnung · Torrevieja Zentrum",
+      t1_d: "Die Sicherheit, garantierte Check-ins zu haben. Sie hinterlassen alles immer perfekt vor der Ankunft meiner Gäste.",
+      t2_n: "María F.",
+      t2_p: "Familienhaus · Punta Prima",
+      t2_d: "Da ich außerhalb von Spanien lebe, brauche ich jemanden, dem ich vertrauen kann. Ihre Reinigungsqualität ist unglaublich.",
+      t3_n: "Jens N.",
+      t3_p: "Ferienhaus · Los Balcones",
+      t3_d: "Der Duo Express Service ist genau das, was ich für Last-Minute-Wechsel brauchte. Schnell und perfekt.",
+      t4_n: "Laura S.",
+      t4_p: "Ferienbungalow · La Mata",
+      t4_d: "Sie haben mir eine große Last abgenommen. Die Detailgenauigkeit entspricht einem Luxushotel."
+    },
+    footer: {
+      text: "Lokaler Betrieb in Torrevieja. Inspiriert von europäischen Standards aus Luxemburg."
     },
     privateHomes: {
       title1: "Nicht nur Ferienwohnungen.",
@@ -1094,6 +1304,41 @@ const translations: Record<LanguageCode, Translation> = {
       label: "Оберіть мову",
       hint: "Проведіть для більшого"
     },
+    s8: {
+      label: "ПРЯМЕ ОБСЛУГОВУВАННЯ",
+      title: "Місцевий сервіс. Міжнародний стандарт.",
+      sub: "Ми обслуговуємо приватні будинки, туристичні апартаменти та точкові потреби в Торрев'єсі та околицях.",
+      c1_t: "Швидка відповідь",
+      c1_d: "Прямий контакт через WhatsApp без форм.",
+      c2_t: "Чіткі ціни",
+      c2_d: "Прозорі ціни та сервіс, адаптований під кожне житло.",
+      c3_t: "Міжнародний досвід",
+      c3_d: "Проєкт із Люксембургу, що працює локально в Торрев'єсі та околицях.",
+      badge: "LUXEMBOURG × TORREVIEJA",
+      badge_s: "Європейське бачення. Місцева увага.",
+      stat1: "Років досвіду",
+      stat2: "Управління нерухомістю"
+    },
+    s9: {
+      label: "Відгуки",
+      title: "Власники, які нам довіряють.",
+      sub: "Апартаменти та будинки, що управляються за найвищими стандартами.",
+      t1_n: "Carlos R.",
+      t1_p: "Апартаменти · Центр Торрев'єхи",
+      t1_d: "Спокій гарантованого заселення. Вони завжди роблять усе ідеально перед приїздом моїх гостей.",
+      t2_n: "María F.",
+      t2_p: "Сімейний будинок · Punta Prima",
+      t2_d: "Оскільки я живу за межами Іспанії, мені потрібна надійна людина. Їхній рівень прибирання дивовижний.",
+      t3_n: "Jens N.",
+      t3_p: "Вілла · Los Balcones",
+      t3_d: "Послуга Duo Express – це саме те, що мені було потрібно для швидких змін.",
+      t4_n: "Laura S.",
+      t4_p: "Бунгало · La Mata",
+      t4_d: "Вони зняли з моїх плечей величезний тягар. Увага до деталей гідна розкішного готелю."
+    },
+    footer: {
+      text: "Місцева діяльність у Торрев'єсі. Натхненно європейськими стандартами з Люксембургу."
+    },
     privateHomes: {
       title1: "Nie tylko apartamenty turystyczne.",
       title_highlight: "Również domy, które nie mogą już czekać.",
@@ -1255,6 +1500,41 @@ const translations: Record<LanguageCode, Translation> = {
     selector: {
       label: "Выберите ваш язык",
       hint: "Проведите для большего"
+    },
+    s8: {
+      label: "ПРЯМОЕ ОБСЛУЖИВАНИЕ",
+      title: "Местный сервис. Международный стандарт.",
+      sub: "Мы обслуживаем частные дома, туристические апартаменты и точечные потребности в Торревьехе и окрестностях.",
+      c1_t: "Быстрый ответ",
+      c1_d: "Прямой контакт через WhatsApp без форм.",
+      c2_t: "Четкие сметы",
+      c2_d: "Прозрачные цены и услуги, адаптированные для каждого дома.",
+      c3_t: "Международный опыт",
+      c3_d: "Проект из Люксембурга, локально работающий в Торревьехе и округе.",
+      badge: "LUXEMBOURG × TORREVIEJA",
+      badge_s: "Европейское видение. Местное внимание.",
+      stat1: "Лет опыта",
+      stat2: "Управление недвижимостью"
+    },
+    s9: {
+      label: "Отзывы",
+      title: "Владельцы, которые нам доверяют.",
+      sub: "Апартаменты и дома, управляемые по самым высоким стандартам.",
+      t1_n: "Carlos R.",
+      t1_p: "Апартаменты · Центр Торревьехи",
+      t1_d: "Спокойствие гарантированного заселения. Они всегда делают всё идеально перед приездом моих гостей.",
+      t2_n: "María F.",
+      t2_p: "Семейный дом · Punta Prima",
+      t2_d: "Поскольку я живу не в Испании, мне нужен надежный человек. Их уровень уборки потрясающий.",
+      t3_n: "Jens N.",
+      t3_p: "Вилла · Los Balcones",
+      t3_d: "Услуга Duo Express — это именно то, что мне было нужно для быстрых смен гостей.",
+      t4_n: "Laura S.",
+      t4_p: "Бунгало · La Mata",
+      t4_d: "Они сняли с меня огромный груз. Внимание к деталям достойно роскошного отеля."
+    },
+    footer: {
+      text: "Местная деятельность в Торревьехе. Вдохновлено европейскими стандартами из Люксембурга."
     },
     privateHomes: {
       title1: "Не лише туристичні апартаменти.",
@@ -1418,6 +1698,42 @@ const translations: Record<LanguageCode, Translation> = {
       label: "Wybierz swój język",
       hint: "Przesuń, aby zobaczyć więcej"
     },
+    s8: {
+      label: "BEZPOŚREDNIA POMOC",
+      title: "Usługa lokalna. Standard międzynarodowy.",
+      sub: "Obsługujemy domy prywatne, apartamenty turystyczne i szczególne potrzeby w Torrevieja i okolicach.",
+      c1_t: "Szybka odpowiedź",
+      c1_d: "Bezpośredni kontakt przez WhatsApp bez formularzy.",
+      c2_t: "Jasna wycena",
+      c2_d: "Przejrzyste ceny i usługi dostosowane do każdego domu.",
+      c3_t: "Doświadczenie międzynarodowe",
+      c3_d: "Projekt napędzany z Luksemburga, działający lokalnie w Torrevieja i okolicach.",
+      badge: "LUXEMBOURG × TORREVIEJA",
+      badge_s: "Europejska wizja. Lokalna opieka.",
+      stat1: "Lata doświadczenia",
+      stat2: "Zarządzane nieruchomości"
+    },
+    s9: {
+      label: "Opinie",
+      title: "Właściciele, którzy nam ufają.",
+      sub: "Apartamenty i domy zarządzane według najwyższych standardów.",
+      t1_n: "Carlos R.",
+      t1_p: "Apartament Turystyczny · Centrum Torrevieja",
+      t1_d: "Spokój wynikający z gwarantowanych zameldowań. Zawsze zostawiają wszystko perfekcyjnie przed przyjazdem moich gości.",
+      t2_n: "María F.",
+      t2_p: "Dom Rodzinny · Punta Prima",
+      t2_d: "Ponieważ mieszkam poza Hiszpanią, potrzebuję kogoś zaufanego. Ich poziom sprzątania jest niesamowity.",
+      t3_n: "Jens N.",
+      t3_p: "Willa Wakacyjna · Los Balcones",
+      t3_d: "Usługa Duo Express jest dokładnie tym, czego potrzebowałem do szybkich zmian.",
+      t4_n: "Laura S.",
+      t4_p: "Bungalow Wakacyjny · La Mata",
+      t4_d: "Zdjęli mi z ramion ogromny ciężar. Dbałość o szczegóły godna luksusowego hotelu."
+    },
+
+    footer: {
+      text: "Lokalna operacja w Torrevieja. Zainspirowany europejskimi standardami z Luksemburga."
+    },
     privateHomes: {
       title1: "Не только туристические апартаменты.",
       title_highlight: "Но и дома, которые больше не могут ждать.",
@@ -1579,6 +1895,41 @@ const translations: Record<LanguageCode, Translation> = {
     selector: {
       label: "Selecteer uw taal",
       hint: "Veeg voor meer talen"
+    },
+    s8: {
+      label: "DIRECTE SERVICE",
+      title: "Lokale service. Internationale standaard.",
+      sub: "We verzorgen particuliere woningen, toeristische appartementen en specifieke behoeften in Torrevieja en omgeving.",
+      c1_t: "Snelle reactie",
+      c1_d: "Direct contact via WhatsApp zonder formulieren.",
+      c2_t: "Duidelijke offerte",
+      c2_d: "Transparante prijzen en service aangepast aan elke woning.",
+      c3_t: "Internationale ervaring",
+      c3_d: "Project gedreven vanuit Luxemburg en lokaal opererend in Torrevieja en omgeving.",
+      badge: "LUXEMBOURG × TORREVIEJA",
+      badge_s: "Europese visie. Lokale zorg.",
+      stat1: "Jaren ervaring",
+      stat2: "Beheerde eigendommen"
+    },
+    s9: {
+      label: "Recensies",
+      title: "Eigenaren die ons vertrouwen.",
+      sub: "Appartementen en woningen beheerd volgens de hoogste normen.",
+      t1_n: "Carlos R.",
+      t1_p: "Toeristisch Appartement · Torrevieja Centrum",
+      t1_d: "De gemoedsrust van gegarandeerde check-ins. Ze laten altijd alles perfect achter voor mijn gasten.",
+      t2_n: "María F.",
+      t2_p: "Familiehuis · Punta Prima",
+      t2_d: "Omdat ik buiten Spanje woon, heb ik iemand nodig die ik kan vertrouwen. Hun schoonmaakniveau is ongelooflijk.",
+      t3_n: "Jens N.",
+      t3_p: "Vakantievilla · Los Balcones",
+      t3_d: "De Duo Express service is precies wat ik nodig had voor last-minute wissels.",
+      t4_n: "Laura S.",
+      t4_p: "Vakantiebungalow · La Mata",
+      t4_d: "Ze namen een enorme last van mijn schouders. De aandacht voor detail is een luxe hotel waardig."
+    },
+    footer: {
+      text: "Lokale activiteit in Torrevieja. Geïnspireerd op Europese normen vanuit Luxemburg."
     },
     privateHomes: {
       title1: "Niet alleen vakantieappartementen.",
@@ -1742,6 +2093,41 @@ const translations: Record<LanguageCode, Translation> = {
       label: "Välj ditt språk",
       hint: "Svep för att se fler språk"
     },
+    s8: {
+      label: "DIREKTSERVICE",
+      title: "Lokal service. Internationell standard.",
+      sub: "Vi sköter privata hem, semesterlägenheter och tillfälliga behov i Torrevieja med omnejd.",
+      c1_t: "Snabbt svar",
+      c1_d: "Direktkontakt via WhatsApp utan formulär.",
+      c2_t: "Tydlig offert",
+      c2_d: "Transparenta priser och tjänster anpassade till varje hem.",
+      c3_t: "Internationell erfarenhet",
+      c3_d: "Projekt drivs från Luxemburg och verkar lokalt i Torrevieja med omnejd.",
+      badge: "LUXEMBOURG × TORREVIEJA",
+      badge_s: "Europeisk vision. Lokal omsorg.",
+      stat1: "Års erfarenhet",
+      stat2: "Förvaltade fastigheter"
+    },
+    s9: {
+      label: "Omdömen",
+      title: "Ägare som litar på oss.",
+      sub: "Lägenheter och hem som sköts med högsta standard.",
+      t1_n: "Carlos R.",
+      t1_p: "Semesterlägenhet · Torrevieja Centrum",
+      t1_d: "Tryggheten med garanterade check-ins. De lämnar alltid allt perfekt före gästernas ankomst.",
+      t2_n: "María F.",
+      t2_p: "Familjehus · Punta Prima",
+      t2_d: "Eftersom jag bor utanför Spanien behöver jag någon jag kan lita på. Deras städnivå är otrolig.",
+      t3_n: "Jens N.",
+      t3_p: "Semestervilla · Los Balcones",
+      t3_d: "Duo Express-tjänsten är exakt vad jag behövde för sista minuten-byten.",
+      t4_n: "Laura S.",
+      t4_p: "Semesterbungalow · La Mata",
+      t4_d: "De tog en enorm börda från mina axlar. Uppmärksamheten på detaljer är värdig ett lyxhotell."
+    },
+    footer: {
+      text: "Lokal verksamhet i Torrevieja. Inspirerad av europeiska standarder från Luxemburg."
+    },
     privateHomes: {
       title1: "Inte bara semesterbostäder.",
       title_highlight: "Även hem som inte kan vänta längre.",
@@ -1903,6 +2289,41 @@ const translations: Record<LanguageCode, Translation> = {
     selector: {
       label: "Velg ditt språk",
       hint: "Sveip for å se flere språk"
+    },
+    s8: {
+      label: "DIREKTE SERVICE",
+      title: "Lokal service. Internasjonal standard.",
+      sub: "Vi betjener private hjem, ferieleiligheter og behov i Torrevieja og omegn.",
+      c1_t: "Rask respons",
+      c1_d: "Direkte kontakt via WhatsApp uten skjemaer.",
+      c2_t: "Klar prising",
+      c2_d: "Transparente priser og tjenester tilpasset hvert hjem.",
+      c3_t: "Internasjonal erfaring",
+      c3_d: "Prosjekt drevet fra Luxembourg, med lokal drift i Torrevieja og omegn.",
+      badge: "LUXEMBOURG × TORREVIEJA",
+      badge_s: "Europeisk visjon. Lokal omtanke.",
+      stat1: "Års erfaring",
+      stat2: "Forvaltede eiendommer"
+    },
+    s9: {
+      label: "Anmeldelser",
+      title: "Eiere som stoler på oss.",
+      sub: "Leiligheter og hjem administrert etter de høyeste standarder.",
+      t1_n: "Carlos R.",
+      t1_p: "Ferieleilighet · Torrevieja Sentrum",
+      t1_d: "Tryggheten med garanterte innsjekkinger. De forlater alltid alt perfekt før gjestene ankommer.",
+      t2_n: "María F.",
+      t2_p: "Familiehus · Punta Prima",
+      t2_d: "Siden jeg bor utenfor Spania, trenger jeg noen jeg kan stole på. Deres rengjøringsgode er utrolig.",
+      t3_n: "Jens N.",
+      t3_p: "Feriehytte · Los Balcones",
+      t3_d: "Duo Express-tjenesten er akkurat det jeg trengte for i siste liten overføringer.",
+      t4_n: "Laura S.",
+      t4_p: "Feriebungalow · La Mata",
+      t4_d: "De fjernet en enorm byrde fra skuldrene mine. Oppmerksomheten på detaljer er av hotell standard."
+    },
+    footer: {
+      text: "Lokal virksomhet i Torrevieja. Inspirert av europeiske standarder fra Luxembourg."
     },
     privateHomes: {
       title1: "Ikke bare ferieleiligheter.",

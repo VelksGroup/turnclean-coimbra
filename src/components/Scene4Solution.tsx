@@ -123,14 +123,26 @@ export function Scene4Solution() {
            </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mx-auto max-w-5xl items-stretch">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mx-auto max-w-5xl items-stretch"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: { staggerChildren: 0.3 }
+            }
+          }}
+        >
           {/* Card 1: SOLO READY */}
           <motion.div style={{ y: yCard1 }} className="flex flex-col">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+              }}
               className="group relative flex flex-col h-full bg-white rounded-3xl p-6 sm:p-10 border border-brand-100/50 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-15px_rgba(0,161,111,0.15)] transition-all duration-500 hover:-translate-y-1"
             >
             {/* Subtle glow border */}
@@ -205,10 +217,10 @@ export function Scene4Solution() {
           {/* Card 2: {t.s4.c2_name} */}
           <motion.div style={{ y: yCard2 }} className="flex flex-col">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+              }}
               className="group relative flex flex-col h-full bg-[#050B08] rounded-3xl p-6 sm:p-10 shadow-[0_20px_50px_-15px_rgba(0,201,139,0.2)] hover:shadow-[0_25px_60px_-15px_rgba(0,201,139,0.3)] transition-all duration-500 hover:-translate-y-1 overflow-hidden"
             >
             {/* Glowing borders and backgrounds */}
@@ -299,7 +311,7 @@ export function Scene4Solution() {
             </a>
             </motion.div>
           </motion.div>
-        </div>
+        </motion.div>
 
         <motion.div 
           style={{ y: yAdd }}
