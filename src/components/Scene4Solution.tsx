@@ -333,7 +333,7 @@ export function Scene4Solution() {
             <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-brand-100/30 rounded-full blur-[100px] -mr-20 -mt-20 pointer-events-none transition-transform duration-1000 group-hover:scale-110" />
             
             <div className="flex flex-col w-full relative z-10">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-8">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-6">
                 <div className="flex items-center gap-3">
                   <div className="w-1.5 h-8 rounded-full bg-brand-500 shadow-[0_0_12px_rgba(10,140,95,0.5)]" />
                   <span className="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900">
@@ -342,10 +342,14 @@ export function Scene4Solution() {
                 </div>
                 <div className="h-px bg-gradient-to-r from-slate-200 to-transparent flex-grow hidden sm:block ml-6" />
               </div>
+
+              <p className="text-[15px] sm:text-[17px] font-bold text-slate-600 mb-8 max-w-2xl">
+                {t.s4.a_top}
+              </p>
               
-              <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-6">
-                {[t.s4.a1, t.s4.a2, t.s4.a3, t.s4.a4, t.s4.a5].map((item, idx) => (
-                  <li key={idx} className={`flex items-start gap-4 text-slate-700 font-semibold text-[15px] sm:text-base group/item ${idx === 4 ? 'sm:col-span-2 lg:col-span-1' : ''}`}>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-5 mb-8">
+                {[t.s4.a2, t.s4.a3, t.s4.a4, t.s4.a5, t.s4.a6, t.s4.a7].map((item, idx) => (
+                  <li key={idx} className={`flex items-start gap-4 text-slate-700 font-semibold text-[15px] sm:text-base group/item`}>
                     <div className="flex items-center justify-center w-6 h-6 rounded-full bg-brand-50 text-brand-600 shrink-0 mt-0.5 border border-brand-200/40 shadow-sm transition-all duration-300 group-hover/item:scale-110 group-hover/item:bg-brand-500 group-hover/item:text-white group-hover/item:border-brand-500 group-hover/item:shadow-[0_0_10px_rgba(10,140,95,0.3)]">
                       <Check size={14} strokeWidth={3} />
                     </div> 
@@ -353,6 +357,12 @@ export function Scene4Solution() {
                   </li>
                 ))}
               </ul>
+
+              <div className="pt-6 border-t border-slate-100">
+                <p className="text-[14px] sm:text-[15px] font-medium text-slate-500">
+                  {t.s4.a_bottom}
+                </p>
+              </div>
             </div>
           </div>
           
