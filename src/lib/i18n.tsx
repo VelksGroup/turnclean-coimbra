@@ -1,10 +1,10 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
-export type LanguageCode = 'es' | 'pt' | 'en' | 'fr' | 'de' | 'pl' | 'uk' | 'ru' | 'nl' | 'sv' | 'no';
+export type LanguageCode = 'pt' | 'es' | 'en' | 'fr' | 'de' | 'pl' | 'uk' | 'ru' | 'nl' | 'sv' | 'no';
 
 export const flags: Record<LanguageCode, string> = {
-  es: '🇪🇸',
   pt: '🇵🇹',
+  es: '🇪🇸',
   en: '🇬🇧',
   fr: '🇫🇷',
   de: '🇩🇪',
@@ -211,11 +211,11 @@ const translations: Record<LanguageCode, Translation> = {
       chip2: "Mañana · tarde · noche · fuera de horario",
       title1: "Tu apartamento no puede fallar en",
       title2: "temporada alta.",
-      subtitle: "Limpieza, preparación y apoyo operativo para alojamientos turísticos en Torrevieja.",
+      subtitle: "Limpieza, preparación y apoyo operativo para alojamientos turísticos en Coimbra.",
       cta: "Proteger mi apartamento por WhatsApp",
       micro: "Respuesta directa. Sin formularios. Sin pérdida de tiempo.",
       badge_lux: "13 años en Luxemburgo",
-      wa: "Hola, quiero proteger mi apartamento turístico en Torrevieja."
+      wa: "Hola, quiero proteger mi apartamento turístico en Coimbra."
     },
     s2: {
       title1: "Una mala limpieza",
@@ -255,7 +255,7 @@ const translations: Record<LanguageCode, Translation> = {
       b6: "Más tranquilidad",
       choose: "Elige tu paquete",
       c1_name: "SOLO READY",
-      c1_price: "Desde 59€",
+      c1_price: "Desde 39€",
       c1_desc: "Para cambios normales y apartamentos pequeños.",
       includes: "Incluye:",
       c1_i1: "Limpieza turística completa",
@@ -269,7 +269,7 @@ const translations: Record<LanguageCode, Translation> = {
       c1_note: "El apartamento queda limpio, ordenado y listo para recibir.",
       c1_btn: "Quiero esta opción",
       c2_name: "DUO EXPRESS",
-      c2_price: "Desde 89€",
+      c2_price: "Desde 69€",
       c2_desc: "Para urgencias, cambios el mismo día y apartamentos con más carga.",
       c2_i1: "Equipo de 2 profesionales",
       c2_i2: "Limpieza turística acelerada",
@@ -293,10 +293,10 @@ const translations: Record<LanguageCode, Translation> = {
       a6: "Servicio fuera de horario",
       a7: "Urgencias el mismo día",
       a_top: "No trabajamos solo con alojamientos turísticos.",
-      a_bottom: "También ayudamos viviendas, cafeterías, restaurantes y negocios locales en Torrevieja.",
+      a_bottom: "También ayudamos viviendas, cafeterías, restaurantes y negocios locales en Coimbra.",
       close_title: "Si necesitas que el apartamento quede listo de verdad, aquí se resuelve.",
       disclaimer: "El próximo huésped no espera. Tu operación tampoco debería fallar.",
-      wa: "Hola, quiero contratar un plan de limpieza para mi apartamento en Torrevieja."
+      wa: "Hola, quiero contratar un plan de limpieza para mi apartamento en Coimbra."
     },
     s5: {
       title_new: "13 años de estándar Luxemburgo.",
@@ -321,7 +321,7 @@ const translations: Record<LanguageCode, Translation> = {
       btn_new: "Quiero resolverlo ya",
       note_new: "Respuesta rápida por WhatsApp.",
       micro_new: "Cuando el huésped entra, ya no hay margen.",
-      wa: "Hola, me interesa asegurar la limpieza de mi apartamento en Torrevieja."
+      wa: "Hola, me interesa asegurar la limpieza de mi apartamento en Coimbra."
     },
     selector: {
       label: "Selecciona tu idioma",
@@ -330,14 +330,14 @@ const translations: Record<LanguageCode, Translation> = {
     s8: {
       label: "ATENCIÓN DIRECTA",
       title: "Servicio local. Estándar internacional.",
-      sub: "Atendemos viviendas particulares, apartamentos turísticos y necesidades puntuales en Torrevieja y Alrededores.",
+      sub: "Atendemos viviendas particulares, apartamentos turísticos y necesidades puntuales en Coimbra y Alrededores.",
       c1_t: "Respuesta rápida",
       c1_d: "Contacto directo por WhatsApp sin formularios.",
       c2_t: "Presupuesto claro",
       c2_d: "Precios transparentes y servicio adaptado a cada vivienda.",
       c3_t: "Experiencia internacional",
-      c3_d: "Proyecto impulsado desde Luxemburgo y operando localmente en Torrevieja y Alrededores.",
-      badge: "LUXEMBOURG × TORREVIEJA",
+      c3_d: "Proyecto impulsado desde Luxemburgo y operando localmente en Coimbra y Alrededores.",
+      badge: "LUXEMBOURG × COIMBRA",
       badge_s: "Visión europea. Atención local.",
       stat1: "Años de experiencia",
       stat2: "Propiedades gestionadas"
@@ -347,27 +347,27 @@ const translations: Record<LanguageCode, Translation> = {
       title: "Propietarios que confían en nosotros.",
       sub: "Apartamentos y viviendas gestionadas con los más altos estándares.",
       t1_n: "Carlos R.",
-      t1_p: "Apartamento Turístico · Torrevieja Centro",
+      t1_p: "Apartamento Turístico · Coimbra Centro",
       t1_d: "La tranquilidad de tener el check-in garantizado. Siempre dejan todo perfecto antes de la llegada de mis huéspedes. Una atención local excelente.",
       t2_n: "María F.",
-      t2_p: "Vivienda Familiar · Punta Prima",
-      t2_d: "Como vivo fuera de España, necesito a alguien de absoluta confianza para mi casa de verano. Su nivel de limpieza y profesionalidad es increíble.",
+      t2_p: "Vivienda Familiar · Aveiro",
+      t2_d: "Como vivo fuera de Portugal, necesito a alguien de absoluta confianza para mi casa de verano. Su nivel de limpieza y profesionalidad es increíble.",
       t3_n: "Jens N.",
-      t3_p: "Chalet Vacacional · Los Balcones",
+      t3_p: "Chalet Vacacional · Águeda",
       t3_d: "El servicio Duo Express es exactamente lo que necesitaba para los cambios de última hora. Rápidos, ordenados y con mucha experiencia.",
       t4_n: "Laura S.",
-      t4_p: "Bungalow Vacacional · La Mata",
+      t4_p: "Bungalow Vacacional · Anadia",
       t4_d: "Me quitaron un peso de encima inmenso. El nivel de detalle en cada habitación es digno de un hotel de lujo. 100% recomendados."
     },
     footer: {
-      text: "Operación local en Torrevieja. Inspirado por estándares europeos desde Luxemburgo."
+      text: "Operación local en Coimbra. Inspirado por estándares europeos desde Luxemburgo."
     },
     privateHomes: {
       title1: "No solo apartamentos turísticos.",
       title_highlight: "También casas que ya no pueden esperar.",
       highlight2: "Si la casa te está venciendo, aquí se resuelve.",
       sub: "Para personas mayores, viudas, hogares exigentes o viviendas que necesitan una limpieza seria de verdad.",
-      micro: "Orden real. Limpieza profunda. Ayuda puntual en Torrevieja.",
+      micro: "Orden real. Limpieza profunda. Ayuda puntual en Coimbra.",
       cards: [
         { title: "Casa limpia. Sin desgaste.", desc: "Cocina, baño, suelos, polvo y orden bajo control." },
         { title: "Apoyo para personas mayores", desc: "Si mantener la casa ya pesa demasiado, entramos nosotros." },
@@ -377,7 +377,7 @@ const translations: Record<LanguageCode, Translation> = {
       cta_title: "No esperes a que la casa empeore.",
       btn: "Pedir ayuda por WhatsApp",
       cta_micro: "Respuesta rápida. Atención discreta. Solución inmediata.",
-      wa_msg: "Hola, necesito pedir ayuda sobre limpieza para una casa en Torrevieja."
+      wa_msg: "Hola, necesito pedir ayuda sobre limpieza para una casa en Coimbra."
     },
   gallery: {
       title1: "El cambio se nota",
@@ -402,7 +402,7 @@ const translations: Record<LanguageCode, Translation> = {
       cta: "¿Quieres este nivel antes del próximo huésped?",
       btn: "Pedir disponibilidad por WhatsApp",
       micro: "Respuesta rápida. Coordinación directa. Sin pérdida de tiempo.",
-      wa: "Hola, necesito información sobre limpieza de apartamentos turísticos en Torrevieja."
+      wa: "Hola, necesito información sobre limpieza de apartamentos turísticos en Coimbra."
     
     }},
   pt: {
@@ -412,11 +412,11 @@ const translations: Record<LanguageCode, Translation> = {
       chip2: "Manhã · tarde · noite · fora de horário",
       title1: "O teu apartamento não pode falhar na",
       title2: "alta temporada.",
-      subtitle: "Limpeza, preparação e apoio operacional para alojamentos turísticos em Torrevieja.",
+      subtitle: "Limpeza, preparação e apoio operacional para alojamentos turísticos em Coimbra.",
       cta: "Proteger o meu apartamento pelo WhatsApp",
       micro: "Resposta direta. Sem formulários. Sem perda de tempo.",
       badge_lux: "13 anos no Luxemburgo",
-      wa: "Olá, quero proteger o meu apartamento turístico em Torrevieja."
+      wa: "Olá, quero proteger o meu apartamento turístico em Coimbra."
     },
     s2: {
       title1: "Uma má limpeza",
@@ -456,7 +456,7 @@ const translations: Record<LanguageCode, Translation> = {
       b6: "Mais tranquilidade",
       choose: "Escolhe o teu pacote",
       c1_name: "SOLO READY",
-      c1_price: "Desde 59€",
+      c1_price: "Desde 39€",
       c1_desc: "Para mudanças normais e pequenos apartamentos.",
       includes: "Inclui:",
       c1_i1: "Limpeza turística completa",
@@ -470,7 +470,7 @@ const translations: Record<LanguageCode, Translation> = {
       c1_note: "O apartamento fica limpo, arrumado e pronto para receber.",
       c1_btn: "Quero esta opção",
       c2_name: "DUO EXPRESS",
-      c2_price: "Desde 89€",
+      c2_price: "Desde 69€",
       c2_desc: "Para urgências, mudanças no próprio dia e apartamentos com maior carga.",
       c2_i1: "Equipa de 2 profissionais",
       c2_i2: "Limpeza turística acelerada",
@@ -494,10 +494,10 @@ const translations: Record<LanguageCode, Translation> = {
       a6: "Serviço fora de horas",
       a7: "Urgências no mesmo dia",
       a_top: "Não trabalhamos apenas com alojamentos turísticos.",
-      a_bottom: "Também ajudamos casas, cafetarias, restaurantes e negócios locais em Torrevieja.",
+      a_bottom: "Também ajudamos casas, cafetarias, restaurantes e negócios locais em Coimbra.",
       close_title: "Se precisas que o apartamento fique verdadeiramente pronto, resolve aqui.",
       disclaimer: "Promoção de lançamento sujeita a tamanho do imóvel e nível de serviço.",
-      wa: "Olá, quero contratar um plano de limpeza para o meu apartamento em Torrevieja."
+      wa: "Olá, quero contratar um plano de limpeza para o meu apartamento em Coimbra."
     },
     s5: {
       title_new: "13 anos de padrão Luxemburgo.",
@@ -522,7 +522,7 @@ const translations: Record<LanguageCode, Translation> = {
       btn_new: "Quero resolver já",
       note_new: "Resposta rápida pelo WhatsApp.",
       micro_new: "Quando o hóspede entra, já não há margem.",
-      wa: "Olá, estou interessado em garantir a limpeza do meu apartamento em Torrevieja."
+      wa: "Olá, estou interessado em garantir a limpeza do meu apartamento em Coimbra."
     },
     selector: {
       label: "Selecione o seu idioma",
@@ -531,14 +531,14 @@ const translations: Record<LanguageCode, Translation> = {
     s8: {
       label: "ATENDIMENTO DIRETO",
       title: "Serviço local. Padrão internacional.",
-      sub: "Atendemos habitações particulares, apartamentos turísticos e necessidades pontuais em Torrevieja e arredores.",
+      sub: "Atendemos habitações particulares, apartamentos turísticos e necessidades pontuais em Coimbra e arredores.",
       c1_t: "Resposta rápida",
       c1_d: "Contacto direto pelo WhatsApp sem formulários.",
       c2_t: "Orçamento claro",
       c2_d: "Preços transparentes e serviço adaptado a cada habitação.",
       c3_t: "Experiência internacional",
-      c3_d: "Projeto impulsionado desde o Luxemburgo e a operar localmente em Torrevieja e arredores.",
-      badge: "LUXEMBOURG × TORREVIEJA",
+      c3_d: "Projeto impulsionado desde o Luxemburgo e a operar localmente em Coimbra e arredores.",
+      badge: "LUXEMBOURG × COIMBRA",
       badge_s: "Visão europeia. Atendimento local.",
       stat1: "Anos de experiência",
       stat2: "Propriedades geridas"
@@ -548,27 +548,27 @@ const translations: Record<LanguageCode, Translation> = {
       title: "Proprietários que confiam em nós.",
       sub: "Apartamentos e habitações geridas com os mais altos padrões.",
       t1_n: "Carlos R.",
-      t1_p: "Apartamento Turístico · Centro de Torrevieja",
+      t1_p: "Apartamento Turístico · Centro de Coimbra",
       t1_d: "A tranquilidade de ter o check-in garantido. Deixam sempre tudo perfeito antes da chegada dos meus hóspedes. Um excelente atendimento local.",
       t2_n: "María F.",
-      t2_p: "Habitação Familiar · Punta Prima",
-      t2_d: "Como vivo fora de Espanha, preciso de alguém de absoluta confiança para a minha casa de verão. O seu nível de limpeza é incrível.",
+      t2_p: "Habitação Familiar · Aveiro",
+      t2_d: "Como vivo fora de Portugal, preciso de alguém de absoluta confiança para a minha casa de verão. O seu nível de limpeza é incrível.",
       t3_n: "Jens N.",
-      t3_p: "Moradia de Férias · Los Balcones",
+      t3_p: "Moradia de Férias · Águeda",
       t3_d: "O serviço Duo Express é exatamente o que eu precisava. Rápidos, organizados e muito experientes.",
       t4_n: "Laura S.",
-      t4_p: "Bungalow Turístico · La Mata",
+      t4_p: "Bungalow Turístico · Anadia",
       t4_d: "Tiraram-me um enorme peso das costas. O nível de detalhe em cada quarto é digno de um hotel de luxo."
     },
     footer: {
-      text: "Operação local em Torrevieja. Inspirado por padrões europeus a partir do Luxemburgo."
+      text: "Operação local em Coimbra. Inspirado por padrões europeus a partir do Luxemburgo."
     },
     privateHomes: {
       title1: "Não apenas apartamentos turísticos.",
       title_highlight: "Também casas que já não podem esperar.",
       highlight2: "Se a casa está a vencer-te, aqui resolvemos.",
       sub: "Para pessoas idosas, viúvas, lares exigentes ou casas que precisam de uma limpeza a sério.",
-      micro: "Ordem real. Limpeza profunda. Ajuda pontual em Torrevieja.",
+      micro: "Ordem real. Limpeza profunda. Ajuda pontual em Coimbra.",
       cards: [
         { title: "Casa limpa. Sem problemas.", desc: "Cozinha, casa de banho, chão, pó e ordem sob controlo." },
         { title: "Apoio a idosos", desc: "Se manter a casa pesa demasiado, nós ajudamos." },
@@ -578,7 +578,7 @@ const translations: Record<LanguageCode, Translation> = {
       cta_title: "Não esperes que a casa piore.",
       btn: "Pedir ajuda pelo WhatsApp",
       cta_micro: "Resposta rápida. Atenção discreta. Solução imediata.",
-      wa_msg: "Olá, preciso de ajuda com a limpeza de uma casa em Torrevieja."
+      wa_msg: "Olá, preciso de ajuda com a limpeza de uma casa em Coimbra."
     },
   gallery: {
       title1: "A mudança nota-se",
@@ -603,7 +603,7 @@ const translations: Record<LanguageCode, Translation> = {
       cta: "Queres este nível antes do próximo hóspede?",
       btn: "Pedir disponibilidade pelo WhatsApp",
       micro: "Resposta rápida. Coordenação direta. Sem perda de tempo.",
-      wa: "Olá, preciso de informações sobre a limpeza de apartamentos turísticos em Torrevieja."
+      wa: "Olá, preciso de informações sobre a limpeza de apartamentos turísticos em Coimbra."
     
     }},
   en: {
@@ -613,11 +613,11 @@ const translations: Record<LanguageCode, Translation> = {
       chip2: "Morning · afternoon · night · out of hours",
       title1: "Your apartment cannot fail in",
       title2: "high season.",
-      subtitle: "Cleaning, preparation and operational support for tourist rentals in Torrevieja.",
+      subtitle: "Cleaning, preparation and operational support for tourist rentals in Coimbra.",
       cta: "Protect my apartment on WhatsApp",
       micro: "Direct reply. No forms. No wasted time.",
       badge_lux: "13 years in Luxembourg",
-      wa: "Hello, I want to protect my tourist apartment in Torrevieja."
+      wa: "Hello, I want to protect my tourist apartment in Coimbra."
     },
     s2: {
       title1: "A bad cleaning",
@@ -657,7 +657,7 @@ const translations: Record<LanguageCode, Translation> = {
       b6: "More peace of mind",
       choose: "Choose your package",
       c1_name: "SOLO READY",
-      c1_price: "From 59€",
+      c1_price: "From 39€",
       c1_desc: "For normal turnovers and small apartments.",
       includes: "Includes:",
       c1_i1: "Complete tourist cleaning",
@@ -671,7 +671,7 @@ const translations: Record<LanguageCode, Translation> = {
       c1_note: "The apartment is clean, tidy, and ready to receive.",
       c1_btn: "I want this option",
       c2_name: "DUO EXPRESS",
-      c2_price: "From 89€",
+      c2_price: "From 69€",
       c2_desc: "For emergencies, same-day turnovers, and heavier workload apartments.",
       c2_i1: "Team of 2 professionals",
       c2_i2: "Accelerated tourist cleaning",
@@ -695,10 +695,10 @@ const translations: Record<LanguageCode, Translation> = {
       a6: "Out of hours service",
       a7: "Same-day emergencies",
       a_top: "We don't just work with tourist accommodations.",
-      a_bottom: "We also help homes, cafes, restaurants, and local businesses in Torrevieja.",
+      a_bottom: "We also help homes, cafes, restaurants, and local businesses in Coimbra.",
       close_title: "If you need the apartment to be truly ready, it is resolved here.",
       disclaimer: "Launch promotion subject to property size and service level.",
-      wa: "Hello, I want to hire a cleaning plan for my tourist apartment in Torrevieja."
+      wa: "Hello, I want to hire a cleaning plan for my tourist apartment in Coimbra."
     },
     s5: {
       title_new: "13 years of Luxembourg standard.",
@@ -723,7 +723,7 @@ const translations: Record<LanguageCode, Translation> = {
       btn_new: "I want to solve it now",
       note_new: "Fast response via WhatsApp.",
       micro_new: "When the guest enters, there is no margin.",
-      wa: "Hello, I am interested in securing the cleaning of my apartment in Torrevieja."
+      wa: "Hello, I am interested in securing the cleaning of my apartment in Coimbra."
     },
     selector: {
       label: "Select your language",
@@ -732,14 +732,14 @@ const translations: Record<LanguageCode, Translation> = {
     s8: {
       label: "DIRECT ASSISTANCE",
       title: "Local service. International standard.",
-      sub: "We serve private homes, holiday apartments and specific needs in Torrevieja and surroundings.",
+      sub: "We serve private homes, holiday apartments and specific needs in Coimbra and surroundings.",
       c1_t: "Fast response",
       c1_d: "Direct contact via WhatsApp with no forms.",
       c2_t: "Clear pricing",
       c2_d: "Transparent prices and service adapted to each home.",
       c3_t: "International experience",
-      c3_d: "Project driven from Luxembourg and operating locally in Torrevieja and Surroundings.",
-      badge: "LUXEMBOURG × TORREVIEJA",
+      c3_d: "Project driven from Luxembourg and operating locally in Coimbra and Surroundings.",
+      badge: "LUXEMBOURG × COIMBRA",
       badge_s: "European vision. Local care.",
       stat1: "Years of experience",
       stat2: "Managed properties"
@@ -749,27 +749,27 @@ const translations: Record<LanguageCode, Translation> = {
       title: "Owners who trust us.",
       sub: "Apartments and homes managed to the highest standards.",
       t1_n: "Carlos R.",
-      t1_p: "Tourist Apartment · Torrevieja Center",
+      t1_p: "Tourist Apartment · Coimbra Center",
       t1_d: "The peace of mind of having guaranteed check-ins. They always leave everything perfect before my guests arrive. Excellent local service.",
       t2_n: "María F.",
-      t2_p: "Family Home · Punta Prima",
-      t2_d: "Since I live outside Spain, I need someone I can fully trust for my summer house. Their cleaning level is incredible.",
+      t2_p: "Family Home · Aveiro",
+      t2_d: "Since I live outside Portugal, I need someone I can fully trust for my summer house. Their cleaning level is incredible.",
       t3_n: "Jens N.",
-      t3_p: "Holiday Villa · Los Balcones",
+      t3_p: "Holiday Villa · Águeda",
       t3_d: "The Duo Express service is exactly what I needed for last-minute turnovers. Fast, tidy, and very experienced.",
       t4_n: "Laura S.",
-      t4_p: "Holiday Bungalow · La Mata",
+      t4_p: "Holiday Bungalow · Anadia",
       t4_d: "They took a huge weight off my shoulders. The attention to detail in every room is worthy of a luxury hotel."
     },
     footer: {
-      text: "Local operation in Torrevieja. Inspired by European standards from Luxembourg."
+      text: "Local operation in Coimbra. Inspired by European standards from Luxembourg."
     },
     privateHomes: {
       title1: "Not just tourist apartments.",
       title_highlight: "Also homes that can no longer wait.",
       highlight2: "If the house is overwhelming you, we solve it here.",
       sub: "For the elderly, widows, demanding households, or homes that need a truly serious cleaning.",
-      micro: "Real order. Deep cleaning. Timely help in Torrevieja.",
+      micro: "Real order. Deep cleaning. Timely help in Coimbra.",
       cards: [
         { title: "Clean home. No stress.", desc: "Kitchen, bathroom, floors, dust, and order under control." },
         { title: "Support for seniors", desc: "If maintaining the house is too heavy, we step in." },
@@ -779,7 +779,7 @@ const translations: Record<LanguageCode, Translation> = {
       cta_title: "Don't wait for the house to get worse.",
       btn: "Ask for help on WhatsApp",
       cta_micro: "Quick response. Discreet attention. Immediate solution.",
-      wa_msg: "Hello, I need help with cleaning a house in Torrevieja."
+      wa_msg: "Hello, I need help with cleaning a house in Coimbra."
     },
   gallery: {
       title1: "The change is noticed",
@@ -804,7 +804,7 @@ const translations: Record<LanguageCode, Translation> = {
       cta: "Do you want this level before the next guest?",
       btn: "Request availability via WhatsApp",
       micro: "Fast response. Direct coordination. No wasting time.",
-      wa: "Hello, I need information about tourist apartment cleaning in Torrevieja."
+      wa: "Hello, I need information about tourist apartment cleaning in Coimbra."
     
     }},
   fr: {
@@ -814,11 +814,11 @@ const translations: Record<LanguageCode, Translation> = {
       chip2: "Matin · après-midi · nuit · hors horaires",
       title1: "Votre appartement ne peut pas échouer en",
       title2: "haute saison.",
-      subtitle: "Nettoyage, préparation et soutien opérationnel pour logements touristiques à Torrevieja.",
+      subtitle: "Nettoyage, préparation et soutien opérationnel pour logements touristiques à Coimbra.",
       cta: "Protéger mon appartement sur WhatsApp",
       micro: "Réponse directe. Sans formulaire. Sans perte de temps.",
       badge_lux: "13 ans au Luxembourg",
-      wa: "Bonjour, je veux protéger mon appartement touristique à Torrevieja."
+      wa: "Bonjour, je veux protéger mon appartement touristique à Coimbra."
     },
     s2: {
       title1: "Un mauvais nettoyage",
@@ -858,7 +858,7 @@ const translations: Record<LanguageCode, Translation> = {
       b6: "Plus de tranquillité",
       choose: "Choisissez votre forfait",
       c1_name: "SOLO READY",
-      c1_price: "Dès 59€",
+      c1_price: "Dès 39€",
       c1_desc: "Pour les changements normaux et les petits appartements.",
       includes: "Comprend :",
       c1_i1: "Nettoyage touristique complet",
@@ -872,7 +872,7 @@ const translations: Record<LanguageCode, Translation> = {
       c1_note: "L'appartement est propre, rangé et prêt à recevoir.",
       c1_btn: "Je veux cette option",
       c2_name: "DUO EXPRESS",
-      c2_price: "Dès 89€",
+      c2_price: "Dès 69€",
       c2_desc: "Pour les urgences, changements le jour même et appartements à forte charge.",
       c2_i1: "Équipe de 2 professionnels",
       c2_i2: "Nettoyage touristique accéléré",
@@ -896,10 +896,10 @@ const translations: Record<LanguageCode, Translation> = {
       a6: "Service en dehors des heures d'ouverture",
       a7: "Urgences le jour même",
       a_top: "Nous ne travaillons pas uniquement avec les hébergements touristiques.",
-      a_bottom: "Nous aidons également les maisons privées, les cafés, les restaurants et les commerces locaux à Torrevieja.",
+      a_bottom: "Nous aidons également les maisons privées, les cafés, les restaurants et les commerces locaux à Coimbra.",
       close_title: "Si vous avez besoin que l'appartement soit vraiment prêt, résolvez-le ici.",
       disclaimer: "Promotion de lancement soumise à la taille de la propriété et au niveau de service.",
-      wa: "Bonjour, je souhaite engager un plan de nettoyage pour mon appartement à Torrevieja."
+      wa: "Bonjour, je souhaite engager un plan de nettoyage pour mon appartement à Coimbra."
     },
     s5: {
       title_new: "13 ans de standard luxembourgeois.",
@@ -924,7 +924,7 @@ const translations: Record<LanguageCode, Translation> = {
       btn_new: "Je veux régler cela maintenant",
       note_new: "Réponse rapide via WhatsApp.",
       micro_new: "Quand le client entre, il n'y a plus de marge.",
-      wa: "Bonjour, je suis intéressé pour garantir le nettoyage de mon appartement à Torrevieja."
+      wa: "Bonjour, je suis intéressé pour garantir le nettoyage de mon appartement à Coimbra."
     },
     selector: {
       label: "Sélectionnez votre langue",
@@ -933,14 +933,14 @@ const translations: Record<LanguageCode, Translation> = {
     s8: {
       label: "ASSISTANCE DIRECTE",
       title: "Service local. Standard international.",
-      sub: "Nous intervenons dans les maisons privées, les appartements touristiques et selon vos besoins à Torrevieja et ses environs.",
+      sub: "Nous intervenons dans les maisons privées, les appartements touristiques et selon vos besoins à Coimbra et ses environs.",
       c1_t: "Réponse rapide",
       c1_d: "Contact direct via WhatsApp sans formulaires.",
       c2_t: "Devis clair",
       c2_d: "Prix transparents et service adapté à chaque logement.",
       c3_t: "Expérience internationale",
-      c3_d: "Projet propulsé depuis le Luxembourg et opérant localement à Torrevieja et ses environs.",
-      badge: "LUXEMBOURG × TORREVIEJA",
+      c3_d: "Projet propulsé depuis le Luxembourg et opérant localement à Coimbra et ses environs.",
+      badge: "LUXEMBOURG × COIMBRA",
       badge_s: "Vision européenne. Service local.",
       stat1: "Années d'expérience",
       stat2: "Propriétés gérées"
@@ -950,27 +950,27 @@ const translations: Record<LanguageCode, Translation> = {
       title: "Les propriétaires qui nous font confiance.",
       sub: "Des appartements et des maisons gérés selon les normes les plus élevées.",
       t1_n: "Carlos R.",
-      t1_p: "Appartement Touristique · Centre de Torrevieja",
+      t1_p: "Appartement Touristique · Centre de Coimbra",
       t1_d: "La sérénité d'avoir un check-in garanti. Ils laissent toujours tout parfait avant l'arrivée de mes invités. Excellent service.",
       t2_n: "María F.",
-      t2_p: "Maison de Famille · Punta Prima",
-      t2_d: "Comme je vis hors d'Espagne, j'ai besoin de quelqu'un de confiance. Leur niveau de nettoyage est incroyable.",
+      t2_p: "Maison de Famille · Aveiro",
+      t2_d: "Comme je vis hors du Portugal, j'ai besoin de quelqu'un de confiance. Leur niveau de nettoyage est incroyable.",
       t3_n: "Jens N.",
-      t3_p: "Villa de Vacances · Los Balcones",
+      t3_p: "Villa de Vacances · Águeda",
       t3_d: "Le service Duo Express est exactement ce qu'il me fallait. Rapide, propre et avec beaucoup d'expérience.",
       t4_n: "Laura S.",
-      t4_p: "Bungalow de Vacances · La Mata",
+      t4_p: "Bungalow de Vacances · Anadia",
       t4_d: "Ils m'ont enlevé un énorme poids. L'attention aux détails est digne d'un hôtel de luxe."
     },
     footer: {
-      text: "Opération locale à Torrevieja. Inspiré par les normes européennes depuis le Luxembourg."
+      text: "Opération locale à Coimbra. Inspiré par les normes européennes depuis le Luxembourg."
     },
     privateHomes: {
       title1: "Pas seulement des locations touristiques.",
       title_highlight: "Aussi des maisons qui ne peuvent plus attendre.",
       highlight2: "Si la maison vous dépasse, on s'en occupe ici.",
       sub: "Pour les personnes âgées, les foyers exigeants ou les maisons qui ont besoin d'un vrai grand nettoyage.",
-      micro: "Ordre réel. Nettoyage en profondeur. Aide ponctuelle à Torrevieja.",
+      micro: "Ordre réel. Nettoyage en profondeur. Aide ponctuelle à Coimbra.",
       cards: [
         { title: "Maison propre. Sans effort.", desc: "Cuisine, salle de bain, sols, poussière et ordre sous contrôle." },
         { title: "Soutien aux personnes âgées", desc: "Si l'entretien de la maison devient trop lourd, nous intervenons." },
@@ -980,7 +980,7 @@ const translations: Record<LanguageCode, Translation> = {
       cta_title: "N'attendez pas que la maison se détériore.",
       btn: "Demander de l'aide sur WhatsApp",
       cta_micro: "Réponse rapide. Discrétion. Solution immédiate.",
-      wa_msg: "Bonjour, j'ai besoin d'aide pour le nettoyage d'une maison à Torrevieja."
+      wa_msg: "Bonjour, j'ai besoin d'aide pour le nettoyage d'une maison à Coimbra."
     },
   gallery: {
       title1: "Le changement se remarque",
@@ -1005,7 +1005,7 @@ const translations: Record<LanguageCode, Translation> = {
       cta: "Voulez-vous ce niveau avant le prochain client ?",
       btn: "Demander la disponibilité sur WhatsApp",
       micro: "Réponse rapide. Coordination directe. Pas de perte de temps.",
-      wa: "Bonjour, j'ai besoin d'informations sur le nettoyage d'appartements touristiques à Torrevieja."
+      wa: "Bonjour, j'ai besoin d'informations sur le nettoyage d'appartements touristiques à Coimbra."
     
     }},
   de: {
@@ -1015,11 +1015,11 @@ const translations: Record<LanguageCode, Translation> = {
       chip2: "Morgen · Nachmittag · Nacht · außerhalb der Zeiten",
       title1: "Ihre Wohnung darf nicht scheitern in der",
       title2: "Hochsaison.",
-      subtitle: "Reinigung, Vorbereitung und operative Unterstützung für Ferienwohnungen in Torrevieja.",
+      subtitle: "Reinigung, Vorbereitung und operative Unterstützung für Ferienwohnungen in Coimbra.",
       cta: "Meine Wohnung per WhatsApp schützen",
       micro: "Direkte Antwort. Keine Formulare. Kein Zeitverlust.",
       badge_lux: "13 Jahre in Luxemburg",
-      wa: "Hallo, ich möchte meine Ferienwohnung in Torrevieja schützen."
+      wa: "Hallo, ich möchte meine Ferienwohnung in Coimbra schützen."
     },
     s2: {
       title1: "Eine schlechte Reinigung",
@@ -1059,7 +1059,7 @@ const translations: Record<LanguageCode, Translation> = {
       b6: "Mehr Sicherheit",
       choose: "Wählen Sie Ihr Paket",
       c1_name: "SOLO READY",
-      c1_price: "Ab 59€",
+      c1_price: "Ab 39€",
       c1_desc: "Für normale Wechsel und kleine Wohnungen.",
       includes: "Beinhaltet:",
       c1_i1: "Komplette touristische Reinigung",
@@ -1073,7 +1073,7 @@ const translations: Record<LanguageCode, Translation> = {
       c1_note: "Die Wohnung ist sauber, ordentlich und empfangsbereit.",
       c1_btn: "Ich wähle diese Option",
       c2_name: "DUO EXPRESS",
-      c2_price: "Ab 89€",
+      c2_price: "Ab 69€",
       c2_desc: "Für Notfälle, Wechsel am selben Tag und Wohnungen mit mehr Aufwand.",
       c2_i1: "Team aus 2 Fachkräften",
       c2_i2: "Beschleunigte touristische Reinigung",
@@ -1097,10 +1097,10 @@ const translations: Record<LanguageCode, Translation> = {
       a6: "Außerhalb der Geschäftszeiten",
       a7: "Notfälle am selben Tag",
       a_top: "Wir arbeiten nicht nur mit Ferienunterkünften.",
-      a_bottom: "Wir helfen auch Privathaushalten, Cafés, Restaurants und lokalen Geschäften in Torrevieja.",
+      a_bottom: "Wir helfen auch Privathaushalten, Cafés, Restaurants und lokalen Geschäften in Coimbra.",
       close_title: "Wenn Sie möchten, dass die Wohnung wirklich bereit ist, klären Sie es hier.",
       disclaimer: "Einführungsangebot abhängig von der Größe der Immobilie.",
-      wa: "Hallo, ich möchte einen Reinigungsplan für meine Ferienwohnung in Torrevieja buchen."
+      wa: "Hallo, ich möchte einen Reinigungsplan für meine Ferienwohnung in Coimbra buchen."
     },
     s5: {
       title_new: "13 Jahre Luxemburger Standard.",
@@ -1125,7 +1125,7 @@ const translations: Record<LanguageCode, Translation> = {
       btn_new: "Ich möchte es jetzt lösen",
       note_new: "Schnelle Antwort über WhatsApp.",
       micro_new: "Wenn der Gast eintritt, gibt es keinen Spielraum mehr.",
-      wa: "Hallo, ich bin daran interessiert, die Reinigung meiner Wohnung in Torrevieja zu sichern."
+      wa: "Hallo, ich bin daran interessiert, die Reinigung meiner Wohnung in Coimbra zu sichern."
     },
     selector: {
       label: "Wähle deine Sprache",
@@ -1134,14 +1134,14 @@ const translations: Record<LanguageCode, Translation> = {
     s8: {
       label: "DIREKTE BETREUUNG",
       title: "Lokaler Service. Internationaler Standard.",
-      sub: "Wir betreuen Privathäuser, Ferienwohnungen und besondere Anforderungen in Torrevieja und Umgebung.",
+      sub: "Wir betreuen Privathäuser, Ferienwohnungen und besondere Anforderungen in Coimbra und Umgebung.",
       c1_t: "Schnelle Antwort",
       c1_d: "Direkter Kontakt per WhatsApp ohne Formulare.",
       c2_t: "Klarer Kostenvoranschlag",
       c2_d: "Transparente Preise und auf jedes Wohnhaus abgestimmter Service.",
       c3_t: "Internationale Erfahrung",
-      c3_d: "Ein Projekt initiiert in Luxemburg mit lokaler Ausführung in Torrevieja und Umgebung.",
-      badge: "LUXEMBOURG × TORREVIEJA",
+      c3_d: "Ein Projekt initiiert in Luxemburg mit lokaler Ausführung in Coimbra und Umgebung.",
+      badge: "LUXEMBOURG × COIMBRA",
       badge_s: "Europäische Vision. Lokale Betreuung.",
       stat1: "Jahre Erfahrung",
       stat2: "Verwaltete Immobilien"
@@ -1151,27 +1151,27 @@ const translations: Record<LanguageCode, Translation> = {
       title: "Eigentümer, die uns vertrauen.",
       sub: "Ferienwohnungen und Häuser, die nach den höchsten Standards betreut werden.",
       t1_n: "Carlos R.",
-      t1_p: "Ferienwohnung · Torrevieja Zentrum",
+      t1_p: "Ferienwohnung · Coimbra Zentrum",
       t1_d: "Die Sicherheit, garantierte Check-ins zu haben. Sie hinterlassen alles immer perfekt vor der Ankunft meiner Gäste.",
       t2_n: "María F.",
-      t2_p: "Familienhaus · Punta Prima",
-      t2_d: "Da ich außerhalb von Spanien lebe, brauche ich jemanden, dem ich vertrauen kann. Ihre Reinigungsqualität ist unglaublich.",
+      t2_p: "Familienhaus · Aveiro",
+      t2_d: "Da ich außerhalb von Portugal lebe, brauche ich jemanden, dem ich vertrauen kann. Ihre Reinigungsqualität ist unglaublich.",
       t3_n: "Jens N.",
-      t3_p: "Ferienhaus · Los Balcones",
+      t3_p: "Ferienhaus · Águeda",
       t3_d: "Der Duo Express Service ist genau das, was ich für Last-Minute-Wechsel brauchte. Schnell und perfekt.",
       t4_n: "Laura S.",
-      t4_p: "Ferienbungalow · La Mata",
+      t4_p: "Ferienbungalow · Anadia",
       t4_d: "Sie haben mir eine große Last abgenommen. Die Detailgenauigkeit entspricht einem Luxushotel."
     },
     footer: {
-      text: "Lokaler Betrieb in Torrevieja. Inspiriert von europäischen Standards aus Luxemburg."
+      text: "Lokaler Betrieb in Coimbra. Inspiriert von europäischen Standards aus Luxemburg."
     },
     privateHomes: {
       title1: "Nicht nur Ferienwohnungen.",
       title_highlight: "Auch Häuser, die nicht länger warten können.",
       highlight2: "Wenn Ihnen der Haushalt über den Kopf wächst, lösen wir das.",
       sub: "Für Senioren, anspruchsvolle Haushalte oder Wohnungen, die eine echte Tiefenreinigung benötigen.",
-      micro: "Echte Ordnung. Tiefenreinigung. Pünktliche Hilfe in Torrevieja.",
+      micro: "Echte Ordnung. Tiefenreinigung. Pünktliche Hilfe in Coimbra.",
       cards: [
         { title: "Sauberes Haus. Ohne Aufwand.", desc: "Küche, Bad, Böden, Staub und Ordnung unter Kontrolle." },
         { title: "Unterstützung für Senioren", desc: "Wenn die Hausarbeit zu viel wird, greifen wir ein." },
@@ -1181,7 +1181,7 @@ const translations: Record<LanguageCode, Translation> = {
       cta_title: "Warten Sie nicht, bis das Haus noch schlimmer wird.",
       btn: "Hilfe per WhatsApp anfordern",
       cta_micro: "Schnelle Antwort. Diskrete Hilfe. Sofortige Lösung.",
-      wa_msg: "Hallo, ich brauche Hilfe bei der Reinigung eines Hauses in Torrevieja."
+      wa_msg: "Hallo, ich brauche Hilfe bei der Reinigung eines Hauses in Coimbra."
     },
   gallery: {
       title1: "Die Veränderung ist sichtbar",
@@ -1206,7 +1206,7 @@ const translations: Record<LanguageCode, Translation> = {
       cta: "Möchten Sie dieses Niveau vor dem nächsten Gast?",
       btn: "Verfügbarkeit per WhatsApp anfragen",
       micro: "Schnelle Antwort. Direkte Koordination. Kein Zeitverlust.",
-      wa: "Hallo, ich benötige Informationen zur Reinigung von Ferienwohnungen in Torrevieja."
+      wa: "Hallo, ich benötige Informationen zur Reinigung von Ferienwohnungen in Coimbra."
     
     }},
   uk: {
@@ -1216,11 +1216,11 @@ const translations: Record<LanguageCode, Translation> = {
       chip2: "Ранок · день · ніч · поза графіком",
       title1: "Ваша квартира не може підвести у",
       title2: "високий сезон.",
-      subtitle: "Прибирання, підготовка та оперативна підтримка туристичного житла в Торрев’єсі.",
+      subtitle: "Прибирання, підготовка та оперативна підтримка туристичного житла в Коїмбрі.",
       cta: "Захистити мою квартиру через WhatsApp",
       micro: "Пряма відповідь. Без форм. Без втрати часу.",
       badge_lux: "13 років у Люксембурзі",
-      wa: "Добрий день, я хочу захистити свої туристичні апартаменти в Торрев'єсі."
+      wa: "Добрий день, я хочу захистити свої туристичні апартаменти в Коїмбрі."
     },
     s2: {
       title1: "Погане прибирання",
@@ -1260,7 +1260,7 @@ const translations: Record<LanguageCode, Translation> = {
       b6: "Більше спокою",
       choose: "Оберіть пакет",
       c1_name: "SOLO READY",
-      c1_price: "Від 59€",
+      c1_price: "Від 39€",
       c1_desc: "Для звичайних змін та невеликих квартир.",
       includes: "Включає:",
       c1_i1: "Повне туристичне прибирання",
@@ -1274,7 +1274,7 @@ const translations: Record<LanguageCode, Translation> = {
       c1_note: "Квартира чиста, охайна та готова приймати.",
       c1_btn: "Обираю цей варіант",
       c2_name: "DUO EXPRESS",
-      c2_price: "Від 89€",
+      c2_price: "Від 69€",
       c2_desc: "Для термінових змін і квартир з великим навантаженням.",
       c2_i1: "Команда з 2 спеціалістів",
       c2_i2: "Прискорене прибирання",
@@ -1298,10 +1298,10 @@ const translations: Record<LanguageCode, Translation> = {
       a6: "Обслуговування в неробочий час",
       a7: "Термінові виклики в той же день",
       a_top: "Ми працюємо не тільки з туристичним житлом.",
-      a_bottom: "Ми також допомагаємо приватним будинкам, кафе, ресторанам та місцевому бізнесу в Торрев'єсі.",
+      a_bottom: "Ми також допомагаємо приватним будинкам, кафе, ресторанам та місцевому бізнесу в Коїмбрі.",
       close_title: "Якщо потрібно, щоб квартира справді була готова - ми допоможемо.",
       disclaimer: "Акційна пропозиція залежить від площі.",
-      wa: "Добрий день, я хочу замовити план прибирання для своїх апартаментів у Торрев'єсі."
+      wa: "Добрий день, я хочу замовити план прибирання для своїх апартаментів у Коїмбрі."
     },
     s5: {
       title_new: "13 років стандарту Люксембургу.",
@@ -1326,7 +1326,7 @@ const translations: Record<LanguageCode, Translation> = {
       btn_new: "Вирішити зараз",
       note_new: "Швидка відповідь через WhatsApp.",
       micro_new: "Остання перевірка перед гостем.",
-      wa: "Добрий день, мене цікавить забезпечення прибирання моїх апартаментів у Торрев'єсі."
+      wa: "Добрий день, мене цікавить забезпечення прибирання моїх апартаментів у Коїмбрі."
     },
     selector: {
       label: "Оберіть мову",
@@ -1335,14 +1335,14 @@ const translations: Record<LanguageCode, Translation> = {
     s8: {
       label: "ПРЯМЕ ОБСЛУГОВУВАННЯ",
       title: "Місцевий сервіс. Міжнародний стандарт.",
-      sub: "Ми обслуговуємо приватні будинки, туристичні апартаменти та точкові потреби в Торрев'єсі та околицях.",
+      sub: "Ми обслуговуємо приватні будинки, туристичні апартаменти та точкові потреби в Коїмбрі та околицях.",
       c1_t: "Швидка відповідь",
       c1_d: "Прямий контакт через WhatsApp без форм.",
       c2_t: "Чіткі ціни",
       c2_d: "Прозорі ціни та сервіс, адаптований під кожне житло.",
       c3_t: "Міжнародний досвід",
-      c3_d: "Проєкт із Люксембургу, що працює локально в Торрев'єсі та околицях.",
-      badge: "LUXEMBOURG × TORREVIEJA",
+      c3_d: "Проєкт із Люксембургу, що працює локально в Коїмбрі та околицях.",
+      badge: "LUXEMBOURG × COIMBRA",
       badge_s: "Європейське бачення. Місцева увага.",
       stat1: "Років досвіду",
       stat2: "Управління нерухомістю"
@@ -1352,37 +1352,37 @@ const translations: Record<LanguageCode, Translation> = {
       title: "Власники, які нам довіряють.",
       sub: "Апартаменти та будинки, що управляються за найвищими стандартами.",
       t1_n: "Carlos R.",
-      t1_p: "Апартаменти · Центр Торрев'єхи",
+      t1_p: "Апартаменти · Центр Коїмбри",
       t1_d: "Спокій гарантованого заселення. Вони завжди роблять усе ідеально перед приїздом моїх гостей.",
       t2_n: "María F.",
-      t2_p: "Сімейний будинок · Punta Prima",
-      t2_d: "Оскільки я живу за межами Іспанії, мені потрібна надійна людина. Їхній рівень прибирання дивовижний.",
+      t2_p: "Сімейний будинок · Aveiro",
+      t2_d: "Оскільки я живу за межами Португалії, мені потрібна надійна людина. Їхній рівень прибирання дивовижний.",
       t3_n: "Jens N.",
-      t3_p: "Вілла · Los Balcones",
+      t3_p: "Вілла · Águeda",
       t3_d: "Послуга Duo Express – це саме те, що мені було потрібно для швидких змін.",
       t4_n: "Laura S.",
-      t4_p: "Бунгало · La Mata",
+      t4_p: "Бунгало · Anadia",
       t4_d: "Вони зняли з моїх плечей величезний тягар. Увага до деталей гідна розкішного готелю."
     },
     footer: {
-      text: "Місцева діяльність у Торрев'єсі. Натхненно європейськими стандартами з Люксембургу."
+      text: "Місцева діяльність у Коїмбрі. Натхненно європейськими стандартами з Люксембургу."
     },
     privateHomes: {
-      title1: "Nie tylko apartamenty turystyczne.",
-      title_highlight: "Również domy, które nie mogą już czekać.",
-      highlight2: "Jeśli dom Cię przytłacza, rozwiązujemy to tutaj.",
-      sub: "Dla seniorów, wymagających domowników lub mieszkań, które naprawdę potrzebują gruntównego sprzątania.",
-      micro: "Prawdziwy porządek. Głębokie sprzątanie. Punktualna pomoc w Torrevieja.",
+      title1: "Не лише туристичні апартаменти.",
+      title_highlight: "Але й будинки, які більше не можуть чекати.",
+      highlight2: "Якщо будинок вас обтяжує, ми вирішуємо це тут.",
+      sub: "Для літніх людей, вимогливих сімей або будинків, які справді потребують серйозного прибирання.",
+      micro: "Справжній порядок. Глибоке прибирання. Вчасна допомога в Коїмбрі.",
       cards: [
-        { title: "Czysty dom. Bez wysiłku.", desc: "Kuchnia, łazienka, podłogi, kurz i porządek pod kontrolą." },
-        { title: "Wsparcie dla seniorów", desc: "Gdy utrzymanie domu staje się zbyt trudne, wkraczamy my." },
-        { title: "Prawdziwe gruntowne sprzątanie", desc: "Nie ukrywamy problemu. Rozwiązujemy go." },
-        { title: "Usługa jednorazowa lub regularna", desc: "Raz, co tydzień lub na żądanie." }
+        { title: "Чистий дім. Без стресу.", desc: "Кухня, ванна, підлога, пил та порядок під контролем." },
+        { title: "Підтримка для літніх людей", desc: "Якщо догляд за будинком стає надто важким, ми допоможемо." },
+        { title: "Справжнє глибоке прибирання", desc: "Ми не приховуємо проблему. Ми її вирішуємо." },
+        { title: "Одноразово або постійно", desc: "Один раз, щотижня або за потребою." }
       ],
-      cta_title: "Nie czekaj, aż w domu będzie gorzej.",
-      btn: "Poproś o pomoc przez WhatsApp",
-      cta_micro: "Szybka odpowiedź. Dyskretna pomoc. Natychmiastowe rozwiązanie.",
-      wa_msg: "Cześć, potrzebuję pomocy w sprzątaniu domu w Torrevieja."
+      cta_title: "Не чекайте, поки стан будинку погіршиться.",
+      btn: "Попросити про допомогу в WhatsApp",
+      cta_micro: "Швидка відповідь. Делікатний підхід. Негайне рішення.",
+      wa_msg: "Привіт, мені потрібна допомога з прибиранням будинку в Коїмбрі."
     },
   gallery: {
       title1: "Зміни помітні",
@@ -1407,7 +1407,7 @@ const translations: Record<LanguageCode, Translation> = {
       cta: "Хочете такий рівень перед наступним гостем?",
       btn: "Запитати доступність через WhatsApp",
       micro: "Швидка відповідь. Пряма координація. Без втрати часу.",
-      wa: "Добрий день, мені потрібна інформація про прибирання туристичних апартаментів у Торрев'єсі."
+      wa: "Добрий день, мені потрібна інформація про прибирання туристичних апартаментів у Коїмбрі."
     
     }},
   ru: {
@@ -1417,11 +1417,11 @@ const translations: Record<LanguageCode, Translation> = {
       chip2: "Утро · день · ночь · вне графика",
       title1: "Ваша квартира не может подвести в",
       title2: "высокий сезон.",
-      subtitle: "Уборка, подготовка и оперативная поддержка туристического жилья в Торревьехе.",
+      subtitle: "Уборка, подготовка и оперативная поддержка туристического жилья в Коимбре.",
       cta: "Защитить мою квартиру через WhatsApp",
       micro: "Прямой ответ. Без форм. Без потери времени.",
       badge_lux: "13 лет в Люксембурге",
-      wa: "Здравствуйте, я хочу защитить свои туристические апартаменты в Торревьехе."
+      wa: "Здравствуйте, я хочу защитить свои туристические апартаменты в Коимбре."
     },
     s2: {
       title1: "Плохая уборка",
@@ -1461,7 +1461,7 @@ const translations: Record<LanguageCode, Translation> = {
       b6: "Больше спокойствия",
       choose: "Выберите пакет",
       c1_name: "SOLO READY",
-      c1_price: "От 59€",
+      c1_price: "От 39€",
       c1_desc: "Для стандартных смен и небольших квартир.",
       includes: "Включает:",
       c1_i1: "Полная туристическая уборка",
@@ -1475,7 +1475,7 @@ const translations: Record<LanguageCode, Translation> = {
       c1_note: "Квартира чистая и готова к приему.",
       c1_btn: "Выбираю этот вариант",
       c2_name: "DUO EXPRESS",
-      c2_price: "От 89€",
+      c2_price: "От 69€",
       c2_desc: "Для срочных смен и повышенных нагрузок.",
       c2_i1: "Команда из 2 специалистов",
       c2_i2: "Ускоренная туристическая уборка",
@@ -1499,10 +1499,10 @@ const translations: Record<LanguageCode, Translation> = {
       a6: "Обслуживание в нерабочее время",
       a7: "Срочные вызовы в тот же день",
       a_top: "Мы работаем не только с туристическим жильем.",
-      a_bottom: "Мы также помогаем частным домам, кафе, ресторанам и местному бизнесу в Торревьехе.",
+      a_bottom: "Мы также помогаем частным домам, кафе, ресторанам и местному бизнесу в Коимбре.",
       close_title: "Если квартира должна быть действительно готова, решайте это здесь.",
       disclaimer: "Промоакция зависит от площади.",
-      wa: "Здравствуйте, я хочу заказать план уборки для своих апартаментов в Торревьехе."
+      wa: "Здравствуйте, я хочу заказать план уборки для своих апартаментов в Коимбре."
     },
     s5: {
       title_new: "13 лет стандарта Люксембурга.",
@@ -1527,7 +1527,7 @@ const translations: Record<LanguageCode, Translation> = {
       btn_new: "Решить сейчас",
       note_new: "Быстрый ответ в WhatsApp.",
       micro_new: "Последняя проверка перед гостем.",
-      wa: "Здравствуйте, меня интересует обеспечение уборки моих апартаментов в Торревьехе."
+      wa: "Здравствуйте, меня интересует обеспечение уборки моих апартаментов в Коимбре."
     },
     selector: {
       label: "Выберите ваш язык",
@@ -1536,14 +1536,14 @@ const translations: Record<LanguageCode, Translation> = {
     s8: {
       label: "ПРЯМОЕ ОБСЛУЖИВАНИЕ",
       title: "Местный сервис. Международный стандарт.",
-      sub: "Мы обслуживаем частные дома, туристические апартаменты и точечные потребности в Торревьехе и окрестностях.",
+      sub: "Мы обслуживаем частные дома, туристические апартаменты и точечные потребности в Коимбре и окрестностях.",
       c1_t: "Быстрый ответ",
       c1_d: "Прямой контакт через WhatsApp без форм.",
       c2_t: "Четкие сметы",
       c2_d: "Прозрачные цены и услуги, адаптированные для каждого дома.",
       c3_t: "Международный опыт",
-      c3_d: "Проект из Люксембурга, локально работающий в Торревьехе и округе.",
-      badge: "LUXEMBOURG × TORREVIEJA",
+      c3_d: "Проект из Люксембурга, локально работающий в Коимбре и округе.",
+      badge: "LUXEMBOURG × COIMBRA",
       badge_s: "Европейское видение. Местное внимание.",
       stat1: "Лет опыта",
       stat2: "Управление недвижимостью"
@@ -1553,37 +1553,37 @@ const translations: Record<LanguageCode, Translation> = {
       title: "Владельцы, которые нам доверяют.",
       sub: "Апартаменты и дома, управляемые по самым высоким стандартам.",
       t1_n: "Carlos R.",
-      t1_p: "Апартаменты · Центр Торревьехи",
+      t1_p: "Апартаменты · Центр Коимбры",
       t1_d: "Спокойствие гарантированного заселения. Они всегда делают всё идеально перед приездом моих гостей.",
       t2_n: "María F.",
-      t2_p: "Семейный дом · Punta Prima",
-      t2_d: "Поскольку я живу не в Испании, мне нужен надежный человек. Их уровень уборки потрясающий.",
+      t2_p: "Семейный дом · Aveiro",
+      t2_d: "Поскольку я живу не в Португалии, мне нужен надежный человек. Их уровень уборки потрясающий.",
       t3_n: "Jens N.",
-      t3_p: "Вилла · Los Balcones",
+      t3_p: "Вилла · Águeda",
       t3_d: "Услуга Duo Express — это именно то, что мне было нужно для быстрых смен гостей.",
       t4_n: "Laura S.",
-      t4_p: "Бунгало · La Mata",
+      t4_p: "Бунгало · Anadia",
       t4_d: "Они сняли с меня огромный груз. Внимание к деталям достойно роскошного отеля."
     },
     footer: {
-      text: "Местная деятельность в Торревьехе. Вдохновлено европейскими стандартами из Люксембурга."
+      text: "Местная деятельность в Коимбре. Вдохновлено европейскими стандартами из Люксембурга."
     },
     privateHomes: {
-      title1: "Не лише туристичні апартаменти.",
-      title_highlight: "Але й будинки, які більше не можуть чекати.",
-      highlight2: "Якщо будинок вас обтяжує, ми вирішуємо це тут.",
-      sub: "Для літніх людей, вимогливих сімей або будинків, які справді потребують серйозного прибирання.",
-      micro: "Справжній порядок. Глибоке прибирання. Вчасна допомога в Торрев'єсі.",
+      title1: "Не только туристические апартаменты.",
+      title_highlight: "Но и дома, которые больше не могут ждать.",
+      highlight2: "Если дом вас утомляет, мы решаем это здесь.",
+      sub: "Для пожилых людей, требовательных семей или домов, которым действительно нужна серьезная уборка.",
+      micro: "Настоящий порядок. Глубокая уборка. Своевременная помощь в Коимбре.",
       cards: [
-        { title: "Чистий дім. Без стресу.", desc: "Кухня, ванна, підлога, пил та порядок під контролем." },
-        { title: "Підтримка для літніх людей", desc: "Якщо догляд за будинком стає надто важким, ми допоможемо." },
-        { title: "Справжнє глибоке прибирання", desc: "Ми не приховуємо проблему. Ми її вирішуємо." },
-        { title: "Одноразово або постійно", desc: "Один раз, щотижня або за потребою." }
+        { title: "Чистый дом. Без усилий.", desc: "Кухня, ванная, полы, пыль и порядок под контролем." },
+        { title: "Поддержка для пожилых людей", desc: "Если уход за домом становится слишком тяжелым, мы поможем." },
+        { title: "Настоящая глубокая уборка", desc: "Мы не скрываем проблему. Мы её решаем." },
+        { title: "Разовая или регулярная", desc: "Один раз, каждую неделю или по необходимости." }
       ],
-      cta_title: "Не чекайте, поки стан будинку погіршиться.",
-      btn: "Попросити про допомогу в WhatsApp",
-      cta_micro: "Швидка відповідь. Делікатний підхід. Негайне рішення.",
-      wa_msg: "Привіт, мені потрібна допомога з прибиранням будинку в Торрев'єсі."
+      cta_title: "Не ждите, пока дом станет еще хуже.",
+      btn: "Попросить помощь в WhatsApp",
+      cta_micro: "Быстрый ответ. Внимательное отношение. Немедленное решение.",
+      wa_msg: "Здравствуйте, мне нужна помощь с уборкой дома в Коимбре."
     },
   gallery: {
       title1: "Изменения заметны",
@@ -1608,7 +1608,7 @@ const translations: Record<LanguageCode, Translation> = {
       cta: "Хотите такой уровень перед следующим гостем?",
       btn: "Узнать доступность через WhatsApp",
       micro: "Быстрый ответ. Прямая координация. Без потери времени.",
-      wa: "Здравстуйте, мне нужна информация об уборке туристических апартаментов в Торревьехе."
+      wa: "Здравстуйте, мне нужна информация об уборке туристических апартаментов в Коимбре."
     
     }},
   pl: {
@@ -1618,11 +1618,11 @@ const translations: Record<LanguageCode, Translation> = {
       chip2: "Rano · popołudnie · noc · poza godzinami",
       title1: "Twój apartament nie może zawieść w",
       title2: "sezonie letnim.",
-      subtitle: "Sprzątanie, przygotowanie i wsparcie operacyjne dla wynajmu turystycznego w Torrevieja.",
+      subtitle: "Sprzątanie, przygotowanie i wsparcie operacyjne dla wynajmu turystycznego w Coimbra.",
       cta: "Zabezpiecz mój apartament przez WhatsApp",
       micro: "Bezpośrednia odpowiedź. Bez formularzy. Bez straty czasu.",
       badge_lux: "13 lat w Luksemburgu",
-      wa: "Dzień dobry, chcę zabezpieczyć mój apartament turystyczny w Torrevieja."
+      wa: "Dzień dobry, chcę zabezpieczyć mój apartament turystyczny w Coimbra."
     },
     s2: {
       title1: "Złe sprzątanie",
@@ -1662,7 +1662,7 @@ const translations: Record<LanguageCode, Translation> = {
       b6: "Większy spokój",
       choose: "Wybierz swój pakiet",
       c1_name: "SOLO READY",
-      c1_price: "Od 59€",
+      c1_price: "Od 39€",
       c1_desc: "Dla standardowych zmian i małych apartamentów.",
       includes: "Obejmuje:",
       c1_i1: "Pełne sprzątanie turystyczne",
@@ -1676,7 +1676,7 @@ const translations: Record<LanguageCode, Translation> = {
       c1_note: "Apartament jest czysty, schludny i gotowy.",
       c1_btn: "Wybieram tę opcję",
       c2_name: "DUO EXPRESS",
-      c2_price: "Od 89€",
+      c2_price: "Od 69€",
       c2_desc: "Dla pilnych zmian i większych obciążeń.",
       c2_i1: "Zespół 2 specjalistów",
       c2_i2: "Przyspieszone sprzątanie",
@@ -1700,10 +1700,10 @@ const translations: Record<LanguageCode, Translation> = {
       a6: "Obsługa poza godzinami pracy",
       a7: "Nagłe wypadki tego samego dnia",
       a_top: "Nie współpracujemy tylko z obiektami turystycznymi.",
-      a_bottom: "Pomagamy również domom prywatnym, kawiarniom, restauracjom i lokalnym firmom w Torrevieja.",
+      a_bottom: "Pomagamy również domom prywatnym, kawiarniom, restauracjom i lokalnym firmom w Coimbra.",
       close_title: "Jeśli potrzebujesz apartamentu naprawdę gotowego, rozwiąż to tutaj.",
       disclaimer: "Promocja wprowadzająca zależy od warunków lokalu.",
-      wa: "Dzień dobry, chcę wynająć plan sprzątania dla mojego apartamentu w Torrevieja."
+      wa: "Dzień dobry, chcę wynająć plan sprzątania dla mojego apartamentu w Coimbra."
     },
     s5: {
       title_new: "13 lat standardu w Luksemburgu.",
@@ -1728,7 +1728,7 @@ const translations: Record<LanguageCode, Translation> = {
       btn_new: "Rozwiąż to teraz",
       note_new: "Szybka odpowiedź przez WhatsApp.",
       micro_new: "Ostatni check przed kolejnym gościem.",
-      wa: "Dzień dobry, jestem zainteresowany/zainteresowana zapewnieniem sprzątania mojego apartamentu w Torrevieja."
+      wa: "Dzień dobry, jestem zainteresowany/zainteresowana zapewnieniem sprzątania mojego apartamentu w Coimbra."
     },
     selector: {
       label: "Wybierz swój język",
@@ -1737,14 +1737,14 @@ const translations: Record<LanguageCode, Translation> = {
     s8: {
       label: "BEZPOŚREDNIA POMOC",
       title: "Usługa lokalna. Standard międzynarodowy.",
-      sub: "Obsługujemy domy prywatne, apartamenty turystyczne i szczególne potrzeby w Torrevieja i okolicach.",
+      sub: "Obsługujemy domy prywatne, apartamenty turystyczne i szczególne potrzeby w Coimbra i okolicach.",
       c1_t: "Szybka odpowiedź",
       c1_d: "Bezpośredni kontakt przez WhatsApp bez formularzy.",
       c2_t: "Jasna wycena",
       c2_d: "Przejrzyste ceny i usługi dostosowane do każdego domu.",
       c3_t: "Doświadczenie międzynarodowe",
-      c3_d: "Projekt napędzany z Luksemburga, działający lokalnie w Torrevieja i okolicach.",
-      badge: "LUXEMBOURG × TORREVIEJA",
+      c3_d: "Projekt napędzany z Luksemburga, działający lokalnie w Coimbra i okolicach.",
+      badge: "LUXEMBOURG × COIMBRA",
       badge_s: "Europejska wizja. Lokalna opieka.",
       stat1: "Lata doświadczenia",
       stat2: "Zarządzane nieruchomości"
@@ -1754,38 +1754,38 @@ const translations: Record<LanguageCode, Translation> = {
       title: "Właściciele, którzy nam ufają.",
       sub: "Apartamenty i domy zarządzane według najwyższych standardów.",
       t1_n: "Carlos R.",
-      t1_p: "Apartament Turystyczny · Centrum Torrevieja",
+      t1_p: "Apartament Turystyczny · Centrum Coimbra",
       t1_d: "Spokój wynikający z gwarantowanych zameldowań. Zawsze zostawiają wszystko perfekcyjnie przed przyjazdem moich gości.",
       t2_n: "María F.",
-      t2_p: "Dom Rodzinny · Punta Prima",
+      t2_p: "Dom Rodzinny · Aveiro",
       t2_d: "Ponieważ mieszkam poza Hiszpanią, potrzebuję kogoś zaufanego. Ich poziom sprzątania jest niesamowity.",
       t3_n: "Jens N.",
-      t3_p: "Willa Wakacyjna · Los Balcones",
+      t3_p: "Willa Wakacyjna · Águeda",
       t3_d: "Usługa Duo Express jest dokładnie tym, czego potrzebowałem do szybkich zmian.",
       t4_n: "Laura S.",
-      t4_p: "Bungalow Wakacyjny · La Mata",
+      t4_p: "Bungalow Wakacyjny · Anadia",
       t4_d: "Zdjęli mi z ramion ogromny ciężar. Dbałość o szczegóły godna luksusowego hotelu."
     },
 
     footer: {
-      text: "Lokalna operacja w Torrevieja. Zainspirowany europejskimi standardami z Luksemburga."
+      text: "Lokalna operacja w Coimbra. Zainspirowany europejskimi standardami z Luksemburga."
     },
     privateHomes: {
-      title1: "Не только туристические апартаменты.",
-      title_highlight: "Но и дома, которые больше не могут ждать.",
-      highlight2: "Если дом вас утомляет, мы решаем это здесь.",
-      sub: "Для пожилых людей, требовательных семей или домов, которым действительно нужна серьезная уборка.",
-      micro: "Настоящий порядок. Глубокая уборка. Своевременная помощь в Торревьехе.",
+      title1: "Nie tylko apartamenty turystyczne.",
+      title_highlight: "Również domy, które nie mogą już czekać.",
+      highlight2: "Jeśli dom Cię przytłacza, rozwiązujemy to tutaj.",
+      sub: "Dla seniorów, wymagających domowników lub mieszkań, które naprawdę potrzebują gruntównego sprzątania.",
+      micro: "Prawdziwy porządek. Głębokie sprzątanie. Punktualna pomoc w Coimbra.",
       cards: [
-        { title: "Чистый дом. Без усилий.", desc: "Кухня, ванная, полы, пыль и порядок под контролем." },
-        { title: "Поддержка для пожилых людей", desc: "Если уход за домом становится слишком тяжелым, мы поможем." },
-        { title: "Настоящая глубокая уборка", desc: "Мы не скрываем проблему. Мы её решаем." },
-        { title: "Разовая или регулярная", desc: "Один раз, каждую неделю или по необходимости." }
+        { title: "Czysty dom. Bez wysiłku.", desc: "Kuchnia, łazienka, podłogi, kurz i porządek pod kontrolą." },
+        { title: "Wsparcie dla seniorów", desc: "Gdy utrzymanie domu staje się zbyt trudne, wkraczamy my." },
+        { title: "Prawdziwe gruntowne sprzątanie", desc: "Nie ukrywamy problemu. Rozwiązujemy go." },
+        { title: "Usługa jednorazowa lub regularna", desc: "Raz, co tydzień lub na żądanie." }
       ],
-      cta_title: "Не ждите, пока дом станет еще хуже.",
-      btn: "Попросить помощь в WhatsApp",
-      cta_micro: "Быстрый ответ. Внимательное отношение. Немедленное решение.",
-      wa_msg: "Здравствуйте, мне нужна помощь с уборкой дома в Торревьехе."
+      cta_title: "Nie czekaj, aż w domu będzie gorzej.",
+      btn: "Poproś o pomoc przez WhatsApp",
+      cta_micro: "Szybka odpowiedź. Dyskretna pomoc. Natychmiastowe rozwiązanie.",
+      wa_msg: "Cześć, potrzebuję pomocy w sprzątaniu domu w Coimbra."
     },
   gallery: {
       title1: "Zmianę widać",
@@ -1810,7 +1810,7 @@ const translations: Record<LanguageCode, Translation> = {
       cta: "Chcesz takiego poziomu przed kolejnym gościem?",
       btn: "Zapytaj o dostępność na WhatsApp",
       micro: "Szybka odpowiedź. Bezpośrednia koordynacja. Bez straty czasu.",
-      wa: "Dzień dobry, potrzebuję informacji o sprzątaniu apartamentów w Torrevieja."
+      wa: "Dzień dobry, potrzebuję informacji o sprzątaniu apartamentów w Coimbra."
     
     }},
   nl: {
@@ -1820,11 +1820,11 @@ const translations: Record<LanguageCode, Translation> = {
       chip2: "Ochtend · middag · nacht · buiten kantooruren",
       title1: "Je appartement mag niet falen in het",
       title2: "hoogseizoen.",
-      subtitle: "Schoonmaak, voorbereiding en operationele ondersteuning voor toeristische verhuur in Torrevieja.",
+      subtitle: "Schoonmaak, voorbereiding en operationele ondersteuning voor toeristische verhuur in Coimbra.",
       cta: "Bescherm mijn appartement via WhatsApp",
       micro: "Direct antwoord. Geen formulieren. Geen tijdverlies.",
       badge_lux: "13 jaar in Luxemburg",
-      wa: "Hallo, ik wil mijn toeristenappartement in Torrevieja beschermen."
+      wa: "Hallo, ik wil mijn toeristenappartement in Coimbra beschermen."
     },
     s2: {
       title1: "Een slechte schoonmaak",
@@ -1864,7 +1864,7 @@ const translations: Record<LanguageCode, Translation> = {
       b6: "Meer rust",
       choose: "Kies uw pakket",
       c1_name: "SOLO READY",
-      c1_price: "Vanaf 59€",
+      c1_price: "Vanaf 39€",
       c1_desc: "Voor normale wissels en kleine appartementen.",
       includes: "Inclusief:",
       c1_i1: "Volledige toeristische schoonmaak",
@@ -1878,7 +1878,7 @@ const translations: Record<LanguageCode, Translation> = {
       c1_note: "Het appartement is schoon, netjes en klaar om te ontvangen.",
       c1_btn: "Ik wil deze optie",
       c2_name: "DUO EXPRESS",
-      c2_price: "Vanaf 89€",
+      c2_price: "Vanaf 69€",
       c2_desc: "Voor noodgevallen, wissels op dezelfde dag en grotere appartementen.",
       c2_i1: "Team van 2 professionals",
       c2_i2: "Versnelde toeristische schoonmaak",
@@ -1902,10 +1902,10 @@ const translations: Record<LanguageCode, Translation> = {
       a6: "Service buiten kantooruren",
       a7: "Spoedgevallen op dezelfde dag",
       a_top: "We werken niet alleen met toeristische accommodaties.",
-      a_bottom: "We helpen ook particuliere woningen, cafés, restaurants en lokale bedrijven in Torrevieja.",
+      a_bottom: "We helpen ook particuliere woningen, cafés, restaurants en lokale bedrijven in Coimbra.",
       close_title: "Als uw appartement echt klaar moet zijn, regelt u het hier.",
       disclaimer: "Lanceringspromotie afhankelijk van grootte.",
-      wa: "Hallo, ik wil een schoonmaakplan inhuren voor mijn appartement in Torrevieja."
+      wa: "Hallo, ik wil een schoonmaakplan inhuren voor mijn appartement in Coimbra."
     },
     s5: {
       title_new: "13 jaar Luxemburgse standaard.",
@@ -1930,7 +1930,7 @@ const translations: Record<LanguageCode, Translation> = {
       btn_new: "Nu oplossen",
       note_new: "Snelle reactie via WhatsApp.",
       micro_new: "Laatste controle voor de gast.",
-      wa: "Hallo, ik ben geïnteresseerd in het beveiligen van de schoonmaak van mijn appartement in Torrevieja."
+      wa: "Hallo, ik ben geïnteresseerd in het beveiligen van de schoonmaak van mijn appartement in Coimbra."
     },
     selector: {
       label: "Selecteer uw taal",
@@ -1939,14 +1939,14 @@ const translations: Record<LanguageCode, Translation> = {
     s8: {
       label: "DIRECTE SERVICE",
       title: "Lokale service. Internationale standaard.",
-      sub: "We verzorgen particuliere woningen, toeristische appartementen en specifieke behoeften in Torrevieja en omgeving.",
+      sub: "We verzorgen particuliere woningen, toeristische appartementen en specifieke behoeften in Coimbra en omgeving.",
       c1_t: "Snelle reactie",
       c1_d: "Direct contact via WhatsApp zonder formulieren.",
       c2_t: "Duidelijke offerte",
       c2_d: "Transparante prijzen en service aangepast aan elke woning.",
       c3_t: "Internationale ervaring",
-      c3_d: "Project gedreven vanuit Luxemburg en lokaal opererend in Torrevieja en omgeving.",
-      badge: "LUXEMBOURG × TORREVIEJA",
+      c3_d: "Project gedreven vanuit Luxemburg en lokaal opererend in Coimbra en omgeving.",
+      badge: "LUXEMBOURG × COIMBRA",
       badge_s: "Europese visie. Lokale zorg.",
       stat1: "Jaren ervaring",
       stat2: "Beheerde eigendommen"
@@ -1956,27 +1956,27 @@ const translations: Record<LanguageCode, Translation> = {
       title: "Eigenaren die ons vertrouwen.",
       sub: "Appartementen en woningen beheerd volgens de hoogste normen.",
       t1_n: "Carlos R.",
-      t1_p: "Toeristisch Appartement · Torrevieja Centrum",
+      t1_p: "Toeristisch Appartement · Coimbra Centrum",
       t1_d: "De gemoedsrust van gegarandeerde check-ins. Ze laten altijd alles perfect achter voor mijn gasten.",
       t2_n: "María F.",
-      t2_p: "Familiehuis · Punta Prima",
-      t2_d: "Omdat ik buiten Spanje woon, heb ik iemand nodig die ik kan vertrouwen. Hun schoonmaakniveau is ongelooflijk.",
+      t2_p: "Familiehuis · Aveiro",
+      t2_d: "Omdat ik buiten Portugal woon, heb ik iemand nodig die ik kan vertrouwen. Hun schoonmaakniveau is ongelooflijk.",
       t3_n: "Jens N.",
-      t3_p: "Vakantievilla · Los Balcones",
+      t3_p: "Vakantievilla · Águeda",
       t3_d: "De Duo Express service is precies wat ik nodig had voor last-minute wissels.",
       t4_n: "Laura S.",
-      t4_p: "Vakantiebungalow · La Mata",
+      t4_p: "Vakantiebungalow · Anadia",
       t4_d: "Ze namen een enorme last van mijn schouders. De aandacht voor detail is een luxe hotel waardig."
     },
     footer: {
-      text: "Lokale activiteit in Torrevieja. Geïnspireerd op Europese normen vanuit Luxemburg."
+      text: "Lokale activiteit in Coimbra. Geïnspireerd op Europese normen vanuit Luxemburg."
     },
     privateHomes: {
       title1: "Niet alleen vakantieappartementen.",
       title_highlight: "Ook huizen die niet langer kunnen wachten.",
       highlight2: "Als het huishouden te veel wordt, lossen we het hier op.",
       sub: "Voor ouderen, veeleisende huishoudens of woningen die echt een serieuze schoonmaak nodig hebben.",
-      micro: "Echte orde. Dieptereiniging. Tijdige hulp in Torrevieja.",
+      micro: "Echte orde. Dieptereiniging. Tijdige hulp in Coimbra.",
       cards: [
         { title: "Schoon huis. Zonder moeite.", desc: "Keuken, badkamer, vloeren, stof en orde onder controle." },
         { title: "Hulp voor ouderen", desc: "Als het bijhouden van het huis te zwaar wordt, grijpen wij in." },
@@ -1986,7 +1986,7 @@ const translations: Record<LanguageCode, Translation> = {
       cta_title: "Wacht niet tot het huis verder achteruitgaat.",
       btn: "Vraag om hulp via WhatsApp",
       cta_micro: "Snel antwoord. Discrete hulp. Directe oplossing.",
-      wa_msg: "Hallo, ik heb hulp nodig bij het schoonmaken van een huis in Torrevieja."
+      wa_msg: "Hallo, ik heb hulp nodig bij het schoonmaken van een huis in Coimbra."
     },
   gallery: {
       title1: "De verandering is zichtbaar",
@@ -2011,7 +2011,7 @@ const translations: Record<LanguageCode, Translation> = {
       cta: "Wil je dit niveau voor de volgende gast?",
       btn: "Vraag beschikbaarheid via WhatsApp",
       micro: "Snel antwoord. Directe coördinatie. Geen tijdverlies.",
-      wa: "Hallo, ik heb informatie nodig over toeristische schoonmaak in Torrevieja."
+      wa: "Hallo, ik heb informatie nodig over toeristische schoonmaak in Coimbra."
     
     }},
   sv: {
@@ -2021,11 +2021,11 @@ const translations: Record<LanguageCode, Translation> = {
       chip2: "Morgon · eftermiddag · natt · utanför arbetstid",
       title1: "Din lägenhet får inte misslyckas under",
       title2: "högsäsong.",
-      subtitle: "Städning, förberedelse och operativt stöd för turistuthyrning i Torrevieja.",
+      subtitle: "Städning, förberedelse och operativt stöd för turistuthyrning i Coimbra.",
       cta: "Skydda min lägenhet via WhatsApp",
       micro: "Direkt svar. Inga formulär. Ingen tidsförlust.",
       badge_lux: "13 år i Luxemburg",
-      wa: "Hej, jag vill skydda min semesterlägenhet i Torrevieja."
+      wa: "Hej, jag vill skydda min semesterlägenhet i Coimbra."
     },
     s2: {
       title1: "En dålig städning",
@@ -2065,7 +2065,7 @@ const translations: Record<LanguageCode, Translation> = {
       b6: "Mer lugn",
       choose: "Välj ditt paket",
       c1_name: "SOLO READY",
-      c1_price: "Från 59€",
+      c1_price: "Från 39€",
       c1_desc: "För normala byten och små lägenheter.",
       includes: "Inkluderar:",
       c1_i1: "Komplett turiststädning",
@@ -2079,7 +2079,7 @@ const translations: Record<LanguageCode, Translation> = {
       c1_note: "Lägenheten är ren och redo.",
       c1_btn: "Jag vill ha det här valet",
       c2_name: "DUO EXPRESS",
-      c2_price: "Från 89€",
+      c2_price: "Från 69€",
       c2_desc: "För brådskande byten och högre belastning.",
       c2_i1: "Team av 2 specialister",
       c2_i2: "Accelererad städning",
@@ -2103,10 +2103,10 @@ const translations: Record<LanguageCode, Translation> = {
       a6: "Service utanför arbetstid",
       a7: "Akutfall samma dag",
       a_top: "Vi arbetar inte bara med turistboenden.",
-      a_bottom: "Vi hjälper även privata hem, kaféer, restauranger och lokala företag i Torrevieja.",
+      a_bottom: "Vi hjälper även privata hem, kaféer, restauranger och lokala företag i Coimbra.",
       close_title: "Lös det här om lägenheten måste vara helt redo.",
       disclaimer: "Lanseringserbjudande beroende på storlek.",
-      wa: "Hej, jag vill anlita en städplan för min lägenhet i Torrevieja."
+      wa: "Hej, jag vill anlita en städplan för min lägenhet i Coimbra."
     },
     s5: {
       title_new: "13 år av Luxemburg-standard.",
@@ -2131,7 +2131,7 @@ const translations: Record<LanguageCode, Translation> = {
       btn_new: "Lös det nu",
       note_new: "Snabbt svar via WhatsApp.",
       micro_new: "Sista kollen innan gästen.",
-      wa: "Hej, jag är intresserad av att säkra städningen av min lägenhet i Torrevieja."
+      wa: "Hej, jag är intresserad av att säkra städningen av min lägenhet i Coimbra."
     },
     selector: {
       label: "Välj ditt språk",
@@ -2140,14 +2140,14 @@ const translations: Record<LanguageCode, Translation> = {
     s8: {
       label: "DIREKTSERVICE",
       title: "Lokal service. Internationell standard.",
-      sub: "Vi sköter privata hem, semesterlägenheter och tillfälliga behov i Torrevieja med omnejd.",
+      sub: "Vi sköter privata hem, semesterlägenheter och tillfälliga behov i Coimbra med omnejd.",
       c1_t: "Snabbt svar",
       c1_d: "Direktkontakt via WhatsApp utan formulär.",
       c2_t: "Tydlig offert",
       c2_d: "Transparenta priser och tjänster anpassade till varje hem.",
       c3_t: "Internationell erfarenhet",
-      c3_d: "Projekt drivs från Luxemburg och verkar lokalt i Torrevieja med omnejd.",
-      badge: "LUXEMBOURG × TORREVIEJA",
+      c3_d: "Projekt drivs från Luxemburg och verkar lokalt i Coimbra med omnejd.",
+      badge: "LUXEMBOURG × COIMBRA",
       badge_s: "Europeisk vision. Lokal omsorg.",
       stat1: "Års erfarenhet",
       stat2: "Förvaltade fastigheter"
@@ -2157,27 +2157,27 @@ const translations: Record<LanguageCode, Translation> = {
       title: "Ägare som litar på oss.",
       sub: "Lägenheter och hem som sköts med högsta standard.",
       t1_n: "Carlos R.",
-      t1_p: "Semesterlägenhet · Torrevieja Centrum",
+      t1_p: "Semesterlägenhet · Coimbra Centrum",
       t1_d: "Tryggheten med garanterade check-ins. De lämnar alltid allt perfekt före gästernas ankomst.",
       t2_n: "María F.",
-      t2_p: "Familjehus · Punta Prima",
-      t2_d: "Eftersom jag bor utanför Spanien behöver jag någon jag kan lita på. Deras städnivå är otrolig.",
+      t2_p: "Familjehus · Aveiro",
+      t2_d: "Eftersom jag bor utanför Portugal behöver jag någon jag kan lita på. Deras städnivå är otrolig.",
       t3_n: "Jens N.",
-      t3_p: "Semestervilla · Los Balcones",
+      t3_p: "Semestervilla · Águeda",
       t3_d: "Duo Express-tjänsten är exakt vad jag behövde för sista minuten-byten.",
       t4_n: "Laura S.",
-      t4_p: "Semesterbungalow · La Mata",
+      t4_p: "Semesterbungalow · Anadia",
       t4_d: "De tog en enorm börda från mina axlar. Uppmärksamheten på detaljer är värdig ett lyxhotell."
     },
     footer: {
-      text: "Lokal verksamhet i Torrevieja. Inspirerad av europeiska standarder från Luxemburg."
+      text: "Lokal verksamhet i Coimbra. Inspirerad av europeiska standarder från Luxemburg."
     },
     privateHomes: {
       title1: "Inte bara semesterbostäder.",
       title_highlight: "Även hem som inte kan vänta längre.",
       highlight2: "Om hemmet känns överväldigande löser vi det åt dig.",
       sub: "För äldre, krävande hushåll eller hem som verkligen behöver en seriös städning.",
-      micro: "Verklig ordning. Djupstädning. Snabb hjälp i Torrevieja.",
+      micro: "Verklig ordning. Djupstädning. Snabb hjälp i Coimbra.",
       cards: [
         { title: "Rent hem. Utan besvär.", desc: "Kök, badrum, golv, damm och ordning under kontroll." },
         { title: "Stöd för äldre", desc: "När det blir för tungt att sköta hemmet rycker vi in." },
@@ -2187,7 +2187,7 @@ const translations: Record<LanguageCode, Translation> = {
       cta_title: "Vänta inte tills hemmet är ännu smutsigare.",
       btn: "Be om hjälp via WhatsApp",
       cta_micro: "Snabbt svar. Diskret hjälp. Omedelbar lösning.",
-      wa_msg: "Hej, jag behöver hjälp med städning av ett hem i Torrevieja."
+      wa_msg: "Hej, jag behöver hjälp med städning av ett hem i Coimbra."
     },
   gallery: {
       title1: "Förändringen syns",
@@ -2212,7 +2212,7 @@ const translations: Record<LanguageCode, Translation> = {
       cta: "Vill du ha den här nivån före nästa gäst?",
       btn: "Fråga om tillgänglighet på WhatsApp",
       micro: "Snabbt svar. Direkt samordning. Ingen tidsförlust.",
-      wa: "Hej, jag behöver information om städning av semesterbostäder i Torrevieja."
+      wa: "Hej, jag behöver information om städning av semesterbostäder i Coimbra."
     
     }},
   no: {
@@ -2222,11 +2222,11 @@ const translations: Record<LanguageCode, Translation> = {
       chip2: "Morgen · ettermiddag · natt · utenom arbeidstid",
       title1: "Leiligheten din kan ikke svikte i",
       title2: "høysesongen.",
-      subtitle: "Rengjøring, forberedelse og operativ støtte for turistutleie i Torrevieja.",
+      subtitle: "Rengjøring, forberedelse og operativ støtte for turistutleie i Coimbra.",
       cta: "Sikre leiligheten min via WhatsApp",
       micro: "Direkte svar. Ingen skjemaer. Ingen bortkastet tid.",
       badge_lux: "13 år i Luxembourg",
-      wa: "Hei, jeg vil beskytte ferieleiligheten min i Torrevieja."
+      wa: "Hei, jeg vil beskytte ferieleiligheten min i Coimbra."
     },
     s2: {
       title1: "En dårlig rengjøring",
@@ -2266,7 +2266,7 @@ const translations: Record<LanguageCode, Translation> = {
       b6: "Mer ro",
       choose: "Velg pakken din",
       c1_name: "SOLO READY",
-      c1_price: "Fra 59€",
+      c1_price: "Fra 39€",
       c1_desc: "For normale bytter og små leiligheter.",
       includes: "Inkluderer:",
       c1_i1: "Komplett turistrengjøring",
@@ -2280,7 +2280,7 @@ const translations: Record<LanguageCode, Translation> = {
       c1_note: "Leiligheten er ren og klar.",
       c1_btn: "Jeg ønsker dette valget",
       c2_name: "DUO EXPRESS",
-      c2_price: "Fra 89€",
+      c2_price: "Fra 69€",
       c2_desc: "For presserende bytter og høyere belastning.",
       c2_i1: "Team på 2 spesialister",
       c2_i2: "Akselerert rengjøring",
@@ -2304,10 +2304,10 @@ const translations: Record<LanguageCode, Translation> = {
       a6: "Service utenom arbeidstid",
       a7: "Akutte oppdrag samme dag",
       a_top: "Vi jobber ikke bare med ferieboliger.",
-      a_bottom: "Vi hjelper også private hjem, kafeer, restauranter og lokale bedrifter i Torrevieja.",
+      a_bottom: "Vi hjelper også private hjem, kafeer, restauranter og lokale bedrifter i Coimbra.",
       close_title: "Løs det her hvis leiligheten må være helt klar.",
       disclaimer: "Lanseringstilbud avhengig av størrelse.",
-      wa: "Hei, jeg vil bestille en renholdsplan for leiligheten min i Torrevieja."
+      wa: "Hei, jeg vil bestille en renholdsplan for leiligheten min i Coimbra."
     },
     s5: {
       title_new: "13 år med Luxembourg-standard.",
@@ -2332,7 +2332,7 @@ const translations: Record<LanguageCode, Translation> = {
       btn_new: "Løs det nå",
       note_new: "Raskt svar via WhatsApp.",
       micro_new: "Siste sjekk før gjesten.",
-      wa: "Hei, jeg er interessert i å sikre renholdet av leiligheten min i Torrevieja."
+      wa: "Hei, jeg er interessert i å sikre renholdet av leiligheten min i Coimbra."
     },
     selector: {
       label: "Velg ditt språk",
@@ -2341,14 +2341,14 @@ const translations: Record<LanguageCode, Translation> = {
     s8: {
       label: "DIREKTE SERVICE",
       title: "Lokal service. Internasjonal standard.",
-      sub: "Vi betjener private hjem, ferieleiligheter og behov i Torrevieja og omegn.",
+      sub: "Vi betjener private hjem, ferieleiligheter og behov i Coimbra og omegn.",
       c1_t: "Rask respons",
       c1_d: "Direkte kontakt via WhatsApp uten skjemaer.",
       c2_t: "Klar prising",
       c2_d: "Transparente priser og tjenester tilpasset hvert hjem.",
       c3_t: "Internasjonal erfaring",
-      c3_d: "Prosjekt drevet fra Luxembourg, med lokal drift i Torrevieja og omegn.",
-      badge: "LUXEMBOURG × TORREVIEJA",
+      c3_d: "Prosjekt drevet fra Luxembourg, med lokal drift i Coimbra og omegn.",
+      badge: "LUXEMBOURG × COIMBRA",
       badge_s: "Europeisk visjon. Lokal omtanke.",
       stat1: "Års erfaring",
       stat2: "Forvaltede eiendommer"
@@ -2358,27 +2358,27 @@ const translations: Record<LanguageCode, Translation> = {
       title: "Eiere som stoler på oss.",
       sub: "Leiligheter og hjem administrert etter de høyeste standarder.",
       t1_n: "Carlos R.",
-      t1_p: "Ferieleilighet · Torrevieja Sentrum",
+      t1_p: "Ferieleilighet · Coimbra Sentrum",
       t1_d: "Tryggheten med garanterte innsjekkinger. De forlater alltid alt perfekt før gjestene ankommer.",
       t2_n: "María F.",
-      t2_p: "Familiehus · Punta Prima",
+      t2_p: "Familiehus · Aveiro",
       t2_d: "Siden jeg bor utenfor Spania, trenger jeg noen jeg kan stole på. Deres rengjøringsgode er utrolig.",
       t3_n: "Jens N.",
-      t3_p: "Feriehytte · Los Balcones",
+      t3_p: "Feriehytte · Águeda",
       t3_d: "Duo Express-tjenesten er akkurat det jeg trengte for i siste liten overføringer.",
       t4_n: "Laura S.",
-      t4_p: "Feriebungalow · La Mata",
+      t4_p: "Feriebungalow · Anadia",
       t4_d: "De fjernet en enorm byrde fra skuldrene mine. Oppmerksomheten på detaljer er av hotell standard."
     },
     footer: {
-      text: "Lokal virksomhet i Torrevieja. Inspirert av europeiske standarder fra Luxembourg."
+      text: "Lokal virksomhet i Coimbra. Inspirert av europeiske standarder fra Luxembourg."
     },
     privateHomes: {
       title1: "Ikke bare ferieleiligheter.",
       title_highlight: "Men også hjem som ikke kan vente lenger.",
       highlight2: "Hvis huset byr på problemer, løser vi det.",
       sub: "For eldre, krevende husholdninger eller hjem som trenger en ordentlig rengjøring.",
-      micro: "Virkelig orden. Dyp rengjøring. Hjelp pålitelig i Torrevieja.",
+      micro: "Virkelig orden. Dyp rengjøring. Hjelp pålitelig i Coimbra.",
       cards: [
         { title: "Rent hus. Uten anstrengelse.", desc: "Kjøkken, bad, gulv, støv og orden under kontroll." },
         { title: "Støtte for eldre", desc: "Når det blir for tungt å vedlikeholde huset, griper vi inn." },
@@ -2388,7 +2388,7 @@ const translations: Record<LanguageCode, Translation> = {
       cta_title: "Ikke vent til huset blir enda verre.",
       btn: "Be om hjelp via WhatsApp",
       cta_micro: "Raskt svar. Diskret oppmerksomhet. Umiddelbar løsning.",
-      wa_msg: "Hei, jeg trenger hjelp med rengjøring av et hus i Torrevieja."
+      wa_msg: "Hei, jeg trenger hjelp med rengjøring av et hus i Coimbra."
     },
   gallery: {
       title1: "Endringen merkes",
@@ -2413,7 +2413,7 @@ const translations: Record<LanguageCode, Translation> = {
       cta: "Vil du ha dette nivået før neste gjest?",
       btn: "Be om tilgjengelighet på WhatsApp",
       micro: "Raskt svar. Direkte koordinering. Ingen tidsspille.",
-      wa: "Hei, jeg trenger informasjon om rengjøring av ferieboliger i Torrevieja."
+      wa: "Hei, jeg trenger informasjon om rengjøring av ferieboliger i Coimbra."
     
     }}
 };
@@ -2427,7 +2427,7 @@ interface I18nContextProps {
 const I18nContext = createContext<I18nContextProps | undefined>(undefined);
 
 export function I18nProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<LanguageCode>('es');
+  const [language, setLanguage] = useState<LanguageCode>('pt');
 
   useEffect(() => {
     const saved = localStorage.getItem('site_lang') as LanguageCode;

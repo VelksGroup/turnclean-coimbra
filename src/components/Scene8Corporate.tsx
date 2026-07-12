@@ -146,12 +146,12 @@ export function Scene8Corporate() {
                    ×
                  </span>
                  
-                 {/* Torrevieja */}
+                 {/* Coimbra */}
                  <div className="flex flex-col items-center">
                    <span className="text-[13px] sm:text-[17px] font-black tracking-[0.15em] sm:tracking-[0.25em] text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-300 drop-shadow-sm">
-                     TORREVIEJA
+                     COIMBRA
                    </span>
-                   <span className="text-2xl drop-shadow-md mt-2">🇪🇸</span>
+                   <span className="text-2xl drop-shadow-md mt-2">🇵🇹</span>
                  </div>
                </div>
                

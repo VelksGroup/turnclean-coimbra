@@ -4,28 +4,25 @@ import { useI18n, flags, LanguageCode } from "../lib/i18n";
 
 export function Scene1Hero() {
   const { t, language, setLanguage } = useI18n();
-  const whatsappUrl = `https://wa.me/34602371714?text=${encodeURIComponent(t.hero.wa)}`;
+  const whatsappUrl = `https://wa.me/351962494484?text=${encodeURIComponent(t.hero.wa)}`;
 
   return (
-    <section className="relative min-h-[85svh] flex flex-col justify-center overflow-hidden pt-4 pb-6 sm:pt-14 sm:pb-12 lg:pt-20 lg:pb-24">
-      {/* Cinematic Scene Background */}
-      <div className="absolute inset-x-0 bottom-0 top-1/2 bg-gradient-to-b from-transparent to-white/90 z-0 pointer-events-none" />
-
+    <section className="relative min-h-[85svh] flex flex-col justify-center overflow-hidden bg-white pt-4 pb-6 sm:pt-14 sm:pb-12 lg:pt-20 lg:pb-24">
       {/* Top Header */}
-      <div className="absolute top-0 left-0 w-full z-50 py-1">
-        <div className="top-header">
+      <div className="absolute top-0 left-0 w-full z-50 bg-white py-3 sm:py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
           {/* Logo / Brand container */}
-          <div className="logo-container">
+          <div className="flex-shrink-0 flex items-center">
             <img 
-              src="/logo-keyclean-header.png" 
-              alt="Torrevieja KeyClean" 
+              src="/logo-turnclean-header.png" 
+              alt="Coimbra TurnClean" 
               fetchPriority="high"
-              className="brand-logo"
+              className="h-20 md:h-28 w-auto object-contain"
             />
           </div>
 
           {/* Experience Badge */}
-          <div className="badge-container">
+          <div className="flex-shrink-1 flex items-center justify-end overflow-hidden">
             <div className="lux-badge bg-white/70 backdrop-blur-md border border-slate-200/50 shadow-sm transition-transform duration-500 hover:scale-105">
               <span className="text-[16px] leading-none shrink-0" title="Luxembourg">🇱🇺</span>
               <span className="text-[10px] sm:text-[11px] font-bold text-slate-800 tracking-wide truncate">{t.hero.badge_lux}</span>

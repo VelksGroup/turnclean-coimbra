@@ -16,6 +16,7 @@ import { Scene8Corporate } from "./components/Scene8Corporate";
 import { Scene9Testimonials } from "./components/Scene9Testimonials";
 import { Scene10Footer } from "./components/Scene10Footer";
 import { FloatingWhatsApp } from "./components/FloatingWhatsApp";
+import { CookieBanner } from "./components/CookieBanner";
 import { motion, useScroll, useSpring } from "motion/react";
 
 function ScrollProgress() {
@@ -56,6 +57,7 @@ export default function App() {
         <Scene10Footer />
       </div>
       <FloatingWhatsApp />
+      <CookieBanner />
     </main>
   );
 }
