@@ -4,7 +4,7 @@ import { useI18n } from "../lib/i18n";
 
 export function Scene7Close() {
   const { t } = useI18n();
-  const whatsappUrl = `https://wa.me/34602371714?text=${encodeURIComponent(t.s7.wa)}`;
+  const whatsappUrl = `https://wa.me/351962494484?text=${encodeURIComponent(t.s7.wa)}`;
 
   return (
     <section className="relative flex flex-col justify-center overflow-hidden pt-8 pb-32 sm:pt-12 sm:pb-40 lg:pt-20 lg:pb-48 z-20 bg-slate-50">

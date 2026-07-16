@@ -126,7 +126,7 @@ function SingleImage({ image, altText, ratioClass }: { image: string, altText: s
 
 export function SceneGallery() {
   const { t } = useI18n();
-  const whatsappUrl = `https://wa.me/34602371714?text=${encodeURIComponent(t.gallery.wa)}`;
+  const whatsappUrl = `https://wa.me/351962494484?text=${encodeURIComponent(t.gallery.wa)}`;
 
   return (
     <section className="relative pt-20 pb-28 sm:pt-28 sm:pb-36 lg:pt-36 lg:pb-44 bg-[#FAFAFA] overflow-hidden">
